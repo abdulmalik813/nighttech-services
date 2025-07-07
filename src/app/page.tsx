@@ -65,16 +65,15 @@ export default function Home() {
           }}
           data-ai-hint="team collaboration"
         >
-          <div className="absolute inset-0 bg-black/50" />
           <div className="relative container px-4 md:px-6 py-12 md:py-24">
             <div className="max-w-2xl">
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-white">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
                     <span className="bg-accent text-primary px-2">Stunning</span> Websites. Delivered
                     <span className="block mt-2"><span className="bg-accent text-primary px-2">Fast.</span></span>
                   </h1>
-                  <p className="max-w-[600px] text-gray-200 md:text-xl">
+                  <p className="max-w-[600px] text-primary-foreground md:text-xl">
                     We build beautiful, high-performance websites tailored to your brand, ensuring a fast turnaround without compromising on quality.
                   </p>
                 </div>
@@ -82,7 +81,7 @@ export default function Home() {
                   <Button asChild size="lg">
                     <a href="#services">Our Services</a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
+                  <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     <a href="#contact">Get in Touch</a>
                   </Button>
                 </div>

@@ -35,10 +35,8 @@ export function Header({ activeSection }: { activeSection?: string }) {
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:max-w-sm">
             <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-            </SheetHeader>
-            <nav className="grid gap-6 text-lg font-medium p-6">
-              <SheetClose asChild>
+                <SheetTitle>
+                <SheetClose asChild>
                 <Link
                   href="#"
                   className="flex items-center gap-2 text-lg font-semibold mb-4"
@@ -48,6 +46,9 @@ export function Header({ activeSection }: { activeSection?: string }) {
                   <span className="">NightTech Services</span>
                 </Link>
               </SheetClose>
+                </SheetTitle>
+            </SheetHeader>
+            <nav className="grid gap-6 text-lg font-medium p-6">
               <SheetClose asChild>
                 <Link href="#services" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'services' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   Services
