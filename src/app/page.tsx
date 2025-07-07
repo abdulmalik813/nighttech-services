@@ -59,11 +59,11 @@ export default function Home() {
           className="relative w-full flex items-center overflow-hidden scroll-mt-32"
           style={{
             minHeight: 'calc(100vh - 4rem)',
-            backgroundImage: "url('https://placehold.co/1920x1080.png')",
+            backgroundImage: "url('https://storage.googleapis.com/gweb-aip-dev.appspot.com/work_fc20914a-8f92-494f-a889-f5c719992d95.jpeg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-          data-ai-hint="technology abstract"
+          data-ai-hint="team collaboration"
         >
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative container px-4 md:px-6 py-12 md:py-24">
@@ -90,8 +90,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
-          <div className="container px-4 md:px-6 py-12 md:py-24">
+        <section id="services" ref={servicesRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24">
+          <div className="container px-4 md:px-6">
             <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
@@ -145,8 +145,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
-          <div className="container grid items-center gap-6 px-4 py-12 md:py-24 md:px-6 lg:grid-cols-2 lg:gap-10">
+        <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
+          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className={cn("space-y-4 text-center lg:text-left transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed lg:mx-0">
@@ -164,8 +164,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
-          <div className={cn("container px-4 md:px-6 py-12 md:py-24 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24">
+          <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">FAQ</div>
@@ -206,8 +206,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full bg-card scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
-          <div className="container grid items-center justify-center gap-8 px-4 md:px-6 py-12 md:py-24">
+        <section id="contact" ref={contactRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
+          <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
