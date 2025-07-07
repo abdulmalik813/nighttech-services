@@ -60,8 +60,7 @@ export default function Home() {
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
-            data-ai-hint="team collaboration"
+            style={{ backgroundImage: "url('/hero.png')" }}
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 container px-4 md:px-6">
@@ -270,19 +269,19 @@ export default function Home() {
                     <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
                        <Phone className="h-5 w-5" />
                     </div>
-                    <a href="tel:+1234567890" className="hover:text-accent transition-colors">+1 (234) 567-890</a>
+                    <a href="tel:+19026299691" className="hover:text-accent transition-colors">(902) 629-9691</a>
                   </div>
                   <div className="flex items-center gap-4 group">
                     <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
                        <Mail className="h-5 w-5" />
                     </div>
-                    <a href="mailto:contact@nighttech.dev" className="hover:text-accent transition-colors">contact@nighttech.dev</a>
+                    <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
                   </div>
                    <div className="flex items-start gap-4 group">
                      <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
                        <MapPin className="h-5 w-5" />
                      </div>
-                    <span className="text-muted-foreground">123 Tech Street, Silicon Valley, CA 94000</span>
+                    <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
                   </div>
                 </div>
               </div>

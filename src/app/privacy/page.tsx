@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
 
               <h2 className="text-2xl font-bold">5. Contact Us</h2>
               <p className="text-muted-foreground">
-                If you have any questions about this Privacy Policy, please contact us at contact@nighttech.dev.
+                If you have any questions about this Privacy Policy, please contact us at info@nighttechservices.com.
               </p>
             </div>
 
