@@ -11,17 +11,17 @@ export function Header({ activeSection }: { activeSection?: string }) {
         <Mountain className="h-6 w-6 text-primary transition-transform group-hover:rotate-12" />
         <span className="ml-2 text-lg font-semibold text-primary">NightTech Services</span>
       </Link>
-      <nav className="ml-auto hidden md:flex items-center gap-4 sm:gap-6">
-        <Button asChild variant="ghost" className={cn(activeSection === 'services' && 'bg-accent text-accent-foreground hover:bg-accent/90')}>
-          <Link href="#services" prefetch={false}>Services</Link>
-        </Button>
-        <Button asChild variant="ghost" className={cn(activeSection === 'about' && 'bg-accent text-accent-foreground hover:bg-accent/90')}>
-          <Link href="#about" prefetch={false}>About</Link>
-        </Button>
-        <Button asChild variant="ghost" className={cn(activeSection === 'faq' && 'bg-accent text-accent-foreground hover:bg-accent/90')}>
-          <Link href="#faq" prefetch={false}>FAQ</Link>
-        </Button>
-        <Button asChild className={cn('bg-accent text-accent-foreground hover:bg-accent/90', activeSection === 'contact' && 'ring-2 ring-ring ring-offset-background')}>
+      <nav className="ml-auto hidden md:flex items-center gap-6">
+        <Link href="#services" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'services' && 'underline underline-offset-4 text-primary')}>
+          Services
+        </Link>
+        <Link href="#about" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'about' && 'underline underline-offset-4 text-primary')}>
+          About
+        </Link>
+        <Link href="#faq" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'faq' && 'underline underline-offset-4 text-primary')}>
+          FAQ
+        </Link>
+        <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
           <Link href="#contact" prefetch={false}>Contact Us</Link>
         </Button>
       </nav>
@@ -49,22 +49,22 @@ export function Header({ activeSection }: { activeSection?: string }) {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href="#services" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'services' && 'text-primary font-semibold')} prefetch={false}>
+                <Link href="#services" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'services' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   Services
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href="#about" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'about' && 'text-primary font-semibold')} prefetch={false}>
+                <Link href="#about" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'about' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   About
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href="#faq" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'faq' && 'text-primary font-semibold')} prefetch={false}>
+                <Link href="#faq" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'faq' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   FAQ
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href="#contact" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'contact' && 'text-primary font-semibold')} prefetch={false}>
+                <Link href="#contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
                   Contact Us
                 </Link>
               </SheetClose>

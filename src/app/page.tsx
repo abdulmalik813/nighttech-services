@@ -54,7 +54,7 @@ export default function Home() {
       <Header activeSection={activeSection} />
       <main className="flex-1">
         <section ref={heroRef} id="hero" className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 py-12 md:py-24">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
@@ -87,7 +87,7 @@ export default function Home() {
         </section>
 
         <section id="services" ref={servicesRef} className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 py-12 md:py-24">
             <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
@@ -142,7 +142,7 @@ export default function Home() {
         </section>
 
         <section id="about" ref={aboutRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
-          <div className="container grid items-center justify-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="container grid items-center justify-center gap-6 px-4 py-12 md:py-24 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className={cn("space-y-4 text-center lg:text-left transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed lg:mx-0">
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         <section id="faq" ref={faqRef} className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
-          <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+          <div className={cn("container px-4 md:px-6 py-12 md:py-24 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">FAQ</div>
@@ -203,7 +203,7 @@ export default function Home() {
         </section>
 
         <section id="contact" ref={contactRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
-          <div className="container grid items-center gap-8 px-4 md:px-6">
+          <div className="container grid items-center gap-8 px-4 md:px-6 py-12 md:py-24">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
