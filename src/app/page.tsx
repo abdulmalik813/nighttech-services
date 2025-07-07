@@ -367,7 +367,7 @@ export default function Home() {
                       <Label htmlFor="message">Message</Label>
                       <Textarea id="message" placeholder="Enter your message" className="min-h-[120px]" />
                     </div>
-                    <Button type="submit" className="w-full">Send Message</Button>
+                    <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Send Message</Button>
                   </form>
                 </CardContent>
               </Card>
