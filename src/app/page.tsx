@@ -56,14 +56,13 @@ export default function Home() {
         <section
           ref={heroRef}
           id="hero"
-          className="relative w-full h-screen flex items-center overflow-hidden scroll-mt-32"
-          style={{
-            backgroundImage: "url('hero.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-          data-ai-hint="team collaboration"
+          className="relative w-full h-screen flex items-center overflow-hidden"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('hero.png')" }}
+            data-ai-hint="team collaboration"
+          />
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 container px-4 md:px-6">
             <div className="max-w-2xl">
@@ -75,6 +74,9 @@ export default function Home() {
                   </h1>
                   <p className="max-w-[600px] text-primary-foreground md:text-xl">
                     SwiftSites helps your brand launch online — in days, not weeks.
+                  </p>
+                  <p className="max-w-[600px] text-primary-foreground md:text-lg">
+                    NightTech Services delivers sleek, <span className="bg-accent text-primary px-2">high-performing</span> websites with <span className="bg-accent text-primary px-2">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
