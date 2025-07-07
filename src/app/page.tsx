@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { FilePlus, FileEdit, TrendingUp, Mails, Palette, Phone, Mail, MapPin, Briefcase } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -102,84 +102,62 @@ export default function Home() {
         <section 
           id="services" 
           ref={servicesRef} 
-          className="w-full scroll-mt-20 overflow-hidden py-20 flex items-center bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
-          <div className="container px-4 md:px-6">
+          className="relative w-full scroll-mt-20 overflow-hidden py-20 flex items-center">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
+              data-ai-hint="technology services"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 container px-4 md:px-6">
             <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Offer</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <div className="inline-block rounded-lg bg-accent text-accent-foreground px-3 py-1 text-sm">Our Services</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary-foreground">What We Offer</h2>
+                <p className="max-w-[900px] text-primary-foreground/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Discover our range of expert services designed to meet your business needs and propel you into the future.
                 </p>
               </div>
             </div>
-            <div className="mt-12 flex w-full max-w-3xl flex-col gap-8">
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <FilePlus className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">New Websites</h3>
-                  <p className="text-muted-foreground mt-2">
+            <div className="mt-12 max-w-3xl mx-auto w-full">
+              <ul className="space-y-6 text-left text-primary-foreground">
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>New Websites</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Custom, responsive, and high-performance websites built from scratch to perfectly match your brand.
                   </p>
-                </div>
-              </div>
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <FileEdit className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Website Editing</h3>
-                  <p className="text-muted-foreground mt-2">
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Website Editing</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Update and enhance your existing website with new features, content, and a modern design refresh.
                   </p>
-                </div>
-              </div>
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <TrendingUp className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">SEO Optimization</h3>
-                  <p className="text-muted-foreground mt-2">
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>SEO Optimization</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Improve your search engine ranking, increase organic traffic, and get discovered by more customers.
                   </p>
-                </div>
-              </div>
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <Mails className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Marketing Emails</h3>
-                  <p className="text-muted-foreground mt-2">
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Marketing Emails</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Engage your audience with targeted, automated email campaigns that drive conversions and build loyalty.
                   </p>
-                </div>
-              </div>
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <Palette className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Email Designs</h3>
-                  <p className="text-muted-foreground mt-2">
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Email Designs</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Beautiful, responsive, and brand-consistent email templates that look great in any inbox.
                   </p>
-                </div>
-              </div>
-              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
-                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
-                  <Briefcase className="h-8 w-8" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Business Solutions</h3>
-                  <p className="text-muted-foreground mt-2">
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Business Solutions</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
                     Custom solutions for your business, like order management systems and other productivity tools.
                   </p>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -370,3 +348,4 @@ export default function Home() {
     </div>
   );
 }
+
