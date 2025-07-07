@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { TiktokIcon } from '@/components/tiktok-icon';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -312,6 +313,12 @@ export default function Home() {
                        <Mail className="h-5 w-5" />
                     </div>
                     <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
+                  </div>
+                  <div className="flex items-center gap-4 group">
+                    <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
+                       <TiktokIcon className="h-5 w-5" />
+                    </div>
+                    <a href="#" className="hover:text-accent transition-colors">@nighttechservices</a>
                   </div>
                    <div className="flex items-start gap-4 group">
                      <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Facebook, Instagram } from 'lucide-react';
+import { TiktokIcon } from '@/components/tiktok-icon';
 
 export function Footer() {
   return (
@@ -9,13 +11,24 @@ export function Footer() {
             &copy; {new Date().getFullYear()} NightTech Services. All rights reserved.
           </p>
         </div>
-        <nav className="flex gap-4 sm:ml-auto sm:gap-6">
+        <nav className="flex items-center gap-4 sm:ml-auto sm:gap-6">
           <Link href="/terms" className="text-sm hover:text-primary" prefetch={false}>
             Terms of Service
           </Link>
           <Link href="/privacy" className="text-sm hover:text-primary" prefetch={false}>
             Privacy Policy
           </Link>
+          <div className="flex gap-4">
+            <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+              <Facebook className="h-5 w-5" />
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+              <Instagram className="h-5 w-5" />
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="TikTok">
+              <TiktokIcon className="h-5 w-5" />
+            </Link>
+          </div>
         </nav>
       </div>
     </footer>
