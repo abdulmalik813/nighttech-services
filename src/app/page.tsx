@@ -144,7 +144,7 @@ export default function Home() {
                     </div>
                     <a href="mailto:contact@nighttech.dev" className="hover:text-accent transition-colors">contact@nighttech.dev</a>
                   </div>
-                   <div className="flex items-center gap-4 group">
+                   <div className="flex items-start gap-4 group">
                      <div className="bg-primary text-primary-foreground rounded-full p-3 group-hover:bg-accent transition-colors">
                        <MapPin className="h-5 w-5" />
                      </div>
