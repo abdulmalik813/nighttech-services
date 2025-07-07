@@ -221,7 +221,7 @@ export default function Home() {
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="#how-to-begin">Begin</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="bg-accent/20 text-accent-foreground hover:bg-accent/30">
+                  <Button asChild size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100">
                     <Link href="#services">What We Offer</Link>
                   </Button>
                   <Button asChild size="lg" variant="default">
