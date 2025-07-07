@@ -105,7 +105,7 @@ export default function Home() {
           className="relative w-full scroll-mt-20 overflow-hidden py-20 flex items-center">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
+              style={{ backgroundImage: "url('/services.png')" }}
               data-ai-hint="technology services"
             />
             <div className="absolute inset-0 bg-black/60" />
@@ -122,37 +122,37 @@ export default function Home() {
             <div className="mt-12 max-w-3xl mx-auto w-full">
               <ul className="space-y-6 text-left text-primary-foreground">
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>New Websites</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>New Websites</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Custom, responsive, and high-performance websites built from scratch to perfectly match your brand.
                   </p>
                 </li>
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Website Editing</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Website Editing</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Update and enhance your existing website with new features, content, and a modern design refresh.
                   </p>
                 </li>
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>SEO Optimization</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>SEO Optimization</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Improve your search engine ranking, increase organic traffic, and get discovered by more customers.
                   </p>
                 </li>
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Marketing Emails</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Marketing Emails</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Engage your audience with targeted, automated email campaigns that drive conversions and build loyalty.
                   </p>
                 </li>
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Email Designs</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Email Designs</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Beautiful, responsive, and brand-consistent email templates that look great in any inbox.
                   </p>
                 </li>
                 <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
-                  <h3 className="text-2xl font-bold"><span className="text-accent mr-2">•</span>Business Solutions</h3>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Business Solutions</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Custom solutions for your business, like order management systems and other productivity tools.
                   </p>
@@ -348,4 +348,3 @@ export default function Home() {
     </div>
   );
 }
-
