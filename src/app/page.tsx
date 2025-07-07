@@ -71,10 +71,11 @@ export default function Home() {
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-white">
-                    Elevate <span className="text-accent">Your Business</span> with NightTech
+                    <span className="bg-accent text-primary px-2">Stunning</span> Websites. Delivered
+                    <span className="block mt-2"><span className="bg-accent text-primary px-2">Fast.</span></span>
                   </h1>
                   <p className="max-w-[600px] text-gray-200 md:text-xl">
-                    We provide professional, cutting-edge technology services to drive your success. From web development to robust cybersecurity, we've got you covered.
+                    We build beautiful, high-performance websites tailored to your brand, ensuring a fast turnaround without compromising on quality.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
