@@ -14,7 +14,7 @@ import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const testimonials = [
@@ -84,6 +84,34 @@ export default function Home() {
   const testimonialsInView = useOnScreen(testimonialsRef, 0.5);
   const contactInView = useOnScreen(contactRef, 0.5);
 
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+ 
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    const onInit = () => {
+        setCount(api.scrollSnapList().length)
+        setCurrent(api.selectedScrollSnap())
+    }
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap())
+    }
+    
+    onInit()
+    api.on('reInit', onInit)
+    api.on('select', onSelect)
+
+    return () => {
+      api.off('reInit', onInit)
+      api.off('select', onSelect)
+    }
+  }, [api])
+
   useEffect(() => {
     if (contactInView) {
       setActiveSection('contact');
@@ -134,12 +162,15 @@ export default function Home() {
                     NightTech Services delivers sleek, <span className="bg-accent text-primary px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="#how-to-begin">Begin</Link>
                   </Button>
-                  <Button asChild size="lg" variant="default">
+                  <Button asChild size="lg" variant="outline">
                     <Link href="#services">What We Offer</Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline">
+                    <Link href="#testimonials">See what others say</Link>
                   </Button>
                 </div>
               </div>
@@ -352,6 +383,7 @@ export default function Home() {
             </div>
             <div className="mx-auto max-w-4xl w-full mt-12">
               <Carousel
+                setApi={setApi}
                 opts={{
                   align: "start",
                   loop: true,
@@ -385,6 +417,18 @@ export default function Home() {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
+              <div className="flex justify-center gap-2 mt-4">
+                {Array.from({ length: count }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={cn(
+                      'h-3 w-3 rounded-full transition-colors',
+                      current === index ? 'bg-primary' : 'bg-primary/20'
+                    )}
+                    aria-label={`Go to slide ${index + 1}`}/>
+                ))}
+              </div>
             </div>
           </div>
         </section>
