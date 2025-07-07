@@ -39,7 +39,7 @@ export function Header({ activeSection }: { activeSection?: string }) {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:max-w-sm">
+          <SheetContent side="right" className="w-[300px] sm:max-w-sm bg-header-footer/80 backdrop-blur-sm">
             <SheetHeader>
                 <SheetTitle>
                 <SheetClose asChild>
