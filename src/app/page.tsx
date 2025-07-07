@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
+        <section id="services" ref={servicesRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
@@ -193,7 +193,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
+        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
@@ -219,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -242,7 +242,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
+        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -268,7 +268,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -316,7 +316,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
