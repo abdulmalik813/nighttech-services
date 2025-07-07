@@ -90,7 +90,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <a href="#services">Begin</a>
+                    <a href="#how-to-begin">Begin</a>
                   </Button>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
             <div className="mx-auto max-w-3xl w-full mt-12">
               <ol className="list-decimal list-inside space-y-4 text-muted-foreground md:text-lg text-left">
-                <li>Fill out our quick form — it helps us understand your goals, brand, and vision.</li>
+                <li>Fill out our <a href="#contact" className="bg-accent text-primary px-2 rounded-md font-semibold transition-colors hover:bg-accent/90">quick form</a> — it helps us understand your goals, brand, and vision.</li>
                 <li>We’ll send you a clear proposal with timeline, pricing, and sample direction.</li>
                 <li>Approve the plan and secure your project with a simple 50% deposit.</li>
                 <li>We get to work. You’ll see results within 48–72 hours.</li>
