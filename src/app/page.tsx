@@ -169,7 +169,7 @@ export default function Home() {
                   <Button asChild size="lg" variant="outline">
                     <Link href="#services">What We Offer</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline">
+                  <Button asChild size="lg" variant="default">
                     <Link href="#testimonials">See what others say</Link>
                   </Button>
                 </div>
