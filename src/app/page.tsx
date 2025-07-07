@@ -82,7 +82,7 @@ export default function Home() {
                     <span className="block mt-2"><span className="bg-accent text-primary px-2">Fast.</span></span>
                   </h1>
                   <p className="max-w-[600px] text-primary-foreground md:text-xl">
-                    SwiftSites helps your brand launch online — in days, not weeks.
+                    NightTech Services helps your brand launch online — in days, not weeks.
                   </p>
                   <p className="max-w-[600px] text-primary-foreground md:text-lg">
                     NightTech Services delivers sleek, <span className="bg-accent text-primary px-2">high-performing</span> websites with <span className="bg-accent text-primary px-2">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
@@ -201,7 +201,7 @@ export default function Home() {
                 We’ve built <span className="bg-accent text-primary px-2">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
               </p>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                Each SwiftSite is:
+                Each NightTech Site is:
               </p>
               <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2 text-left max-w-md mx-auto">
                 <li>• <span className="bg-accent text-primary px-2">Custom-tailored</span> to match your brand</li>
@@ -226,7 +226,7 @@ export default function Home() {
               </p>
               <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                 <p>
-                  <span className="bg-accent text-primary px-2">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At SwiftSites, we close the gap between your vision and execution.
+                  <span className="bg-accent text-primary px-2">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services, we close the gap between your vision and execution.
                 </p>
                 <p>
                   We build <span className="bg-accent text-primary px-2">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
@@ -316,8 +316,8 @@ export default function Home() {
         <section id="contact" ref={contactRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Need more information?</div>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Need more information?</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
                 Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach us through our contact details.
               </p>
