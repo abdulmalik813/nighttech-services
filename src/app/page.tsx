@@ -200,7 +200,7 @@ export default function Home() {
               <p className="text-muted-foreground md:text-xl/relaxed">
                 We’ve built <span className="bg-accent text-primary px-2 rounded-md">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
               </p>
-              <div className="inline-block text-left">
+              <div className="text-left">
                 <p className="text-muted-foreground md:text-xl/relaxed">
                   Each NightTech Site is:
                 </p>
