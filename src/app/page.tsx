@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Server, Code, ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
+import { FilePlus, FileEdit, TrendingUp, Mails, Palette, Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -104,39 +104,65 @@ export default function Home() {
               <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <Code className="h-8 w-8" />
+                    <FilePlus className="h-8 w-8" />
                   </div>
-                  <CardTitle className="mt-4">Web Development</CardTitle>
+                  <CardTitle className="mt-4">New Websites</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Custom, responsive, and high-performance websites and applications tailored to your brand and business goals.
+                    Custom, responsive, and high-performance websites built from scratch to perfectly match your brand.
                   </p>
                 </CardContent>
               </Card>
               <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <Server className="h-8 w-8" />
+                    <FileEdit className="h-8 w-8" />
                   </div>
-                  <CardTitle className="mt-4">Cloud Solutions</CardTitle>
+                  <CardTitle className="mt-4">Website Editing</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Scalable and secure cloud infrastructure setup and management to ensure your services are always available and performant.
+                    Update and enhance your existing website with new features, content, and a modern design refresh.
                   </p>
                 </CardContent>
               </Card>
               <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <ShieldCheck className="h-8 w-8" />
+                    <TrendingUp className="h-8 w-8" />
                   </div>
-                  <CardTitle className="mt-4">Cybersecurity</CardTitle>
+                  <CardTitle className="mt-4">SEO Optimization</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Comprehensive security audits, threat monitoring, and protection strategies to safeguard your digital assets.
+                    Improve your search engine ranking, increase organic traffic, and get discovered by more customers.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
+                <CardHeader className="items-center">
+                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
+                    <Mails className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="mt-4">Marketing Emails</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Engage your audience with targeted, automated email campaigns that drive conversions and build loyalty.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
+                <CardHeader className="items-center">
+                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
+                    <Palette className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="mt-4">Email Designs</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Beautiful, responsive, and brand-consistent email templates that look great in any inbox.
                   </p>
                 </CardContent>
               </Card>
@@ -147,6 +173,7 @@ export default function Home() {
         <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
                 <span className="bg-accent text-primary px-2">Frustrated with slow, outdated websites that don't perform?</span>
               </h2>
