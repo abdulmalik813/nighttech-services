@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
-          <div className="container px-4 md:px-6">
+          <div className="container">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -47,7 +47,7 @@ export default function Home() {
         </section>
 
         <section id="services" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
@@ -102,7 +102,7 @@ export default function Home() {
         </section>
 
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-card">
-          <div className="container grid items-center justify-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="container grid items-center justify-center gap-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed lg:mx-0">
@@ -121,7 +121,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
+          <div className="container grid items-center justify-center gap-8">
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
