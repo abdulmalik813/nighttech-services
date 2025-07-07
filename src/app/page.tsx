@@ -17,20 +17,26 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const ourWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const howToBeginRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const isHeroVisible = useOnScreen(heroRef, 0.2);
   const isServicesVisible = useOnScreen(servicesRef, 0.2);
+  const isOurWorkVisible = useOnScreen(ourWorkRef, 0.2);
   const isAboutVisible = useOnScreen(aboutRef, 0.2);
+  const isHowToBeginVisible = useOnScreen(howToBeginRef, 0.2);
   const isFaqVisible = useOnScreen(faqRef, 0.2);
   const isContactVisible = useOnScreen(contactRef, 0.2);
 
   const [activeSection, setActiveSection] = useState('hero');
   const heroInView = useOnScreen(heroRef, 0.5);
   const servicesInView = useOnScreen(servicesRef, 0.5);
+  const ourWorkInView = useOnScreen(ourWorkRef, 0.5);
   const aboutInView = useOnScreen(aboutRef, 0.5);
+  const howToBeginInView = useOnScreen(howToBeginRef, 0.5);
   const faqInView = useOnScreen(faqRef, 0.5);
   const contactInView = useOnScreen(contactRef, 0.5);
 
@@ -39,14 +45,18 @@ export default function Home() {
       setActiveSection('contact');
     } else if (faqInView) {
       setActiveSection('faq');
+    } else if (howToBeginInView) {
+      setActiveSection('how-to-begin');
     } else if (aboutInView) {
       setActiveSection('about');
+    } else if (ourWorkInView) {
+      setActiveSection('our-work');
     } else if (servicesInView) {
       setActiveSection('services');
     } else if (heroInView) {
       setActiveSection('hero');
     }
-  }, [heroInView, servicesInView, aboutInView, faqInView, contactInView]);
+  }, [heroInView, servicesInView, ourWorkInView, aboutInView, howToBeginInView, faqInView, contactInView]);
 
 
   return (
@@ -182,7 +192,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+          <div className="container px-4 md:px-6">
+            <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
+              <p className="text-muted-foreground md:text-xl/relaxed">
+                We’ve built <span className="bg-accent text-primary px-2">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
+              </p>
+              <p className="text-muted-foreground md:text-xl/relaxed">
+                Each SwiftSite is:
+              </p>
+              <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2 text-left max-w-md mx-auto">
+                <li>• <span className="bg-accent text-primary px-2">Custom-tailored</span> to match your brand</li>
+                <li>• Designed for a <span className="bg-accent text-primary px-2">mobile-first experience</span></li>
+                <li>• <span className="bg-accent text-primary px-2">SEO-ready</span> to get you found fast</li>
+                <li>• Built to <span className="bg-accent text-primary px-2">convert visitors into leads or sales</span></li>
+              </ul>
+              <p className="text-muted-foreground md:text-xl/relaxed">
+                We combine <span className="bg-accent text-primary px-2">speed with strategy</span>, <span className="bg-accent text-primary px-2">clean design with real results</span>. Your site doesn’t just look great — it <span className="bg-accent text-primary px-2">works hard behind the scenes</span> to grow your business.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -201,6 +234,32 @@ export default function Home() {
                   Whether you're a growing startup or an established brand ready to level up, we bring speed, strategy, and sharp design to every project — including expert SEO that gets you found.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+          <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How to Begin</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Process</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Here’s how to get started in a way that’s <span className="bg-accent text-primary px-2">fast, smart, and safe</span> for both of us:
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl w-full mt-12">
+              <ol className="list-decimal list-inside space-y-4 text-muted-foreground md:text-lg text-left">
+                <li>Fill out our quick form — it helps us understand your goals, brand, and vision.</li>
+                <li>We’ll send you a clear proposal with timeline, pricing, and sample direction.</li>
+                <li>Approve the plan and secure your project with a simple 50% deposit.</li>
+                <li>We get to work. You’ll see results within 48–72 hours.</li>
+                <li>When you’re 100% satisfied, pay the final 50% and we launch your live website.</li>
+              </ol>
+              <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
+                This proven system filters <span className="bg-accent text-primary px-2">serious clients</span>, keeps everyone <span className="bg-accent text-primary px-2">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-primary px-2">beautiful, high-performing website</span> you’ll love.
+              </p>
             </div>
           </div>
         </section>

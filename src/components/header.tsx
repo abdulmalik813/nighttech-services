@@ -15,8 +15,14 @@ export function Header({ activeSection }: { activeSection?: string }) {
         <Link href="#services" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'services' && 'underline underline-offset-4 text-primary')}>
           Services
         </Link>
+        <Link href="#our-work" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'our-work' && 'underline underline-offset-4 text-primary')}>
+          Our Work
+        </Link>
         <Link href="#about" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'about' && 'underline underline-offset-4 text-primary')}>
           About
+        </Link>
+        <Link href="#how-to-begin" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'how-to-begin' && 'underline underline-offset-4 text-primary')}>
+          Process
         </Link>
         <Link href="#faq" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'faq' && 'underline underline-offset-4 text-primary')}>
           FAQ
@@ -55,8 +61,18 @@ export function Header({ activeSection }: { activeSection?: string }) {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
+                <Link href="#our-work" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'our-work' && 'text-primary underline underline-offset-4')} prefetch={false}>
+                  Our Work
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
                 <Link href="#about" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'about' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   About
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link href="#how-to-begin" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'how-to-begin' && 'text-primary underline underline-offset-4')} prefetch={false}>
+                  Process
                 </Link>
               </SheetClose>
               <SheetClose asChild>
