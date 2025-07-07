@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -21,17 +21,39 @@ export default function Home() {
   const faqRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const isHeroVisible = useOnScreen(heroRef);
-  const isServicesVisible = useOnScreen(servicesRef);
-  const isAboutVisible = useOnScreen(aboutRef);
-  const isFaqVisible = useOnScreen(faqRef);
-  const isContactVisible = useOnScreen(contactRef);
+  const isHeroVisible = useOnScreen(heroRef, 0.2);
+  const isServicesVisible = useOnScreen(servicesRef, 0.2);
+  const isAboutVisible = useOnScreen(aboutRef, 0.2);
+  const isFaqVisible = useOnScreen(faqRef, 0.2);
+  const isContactVisible = useOnScreen(contactRef, 0.2);
+
+  const [activeSection, setActiveSection] = useState('hero');
+  const heroInView = useOnScreen(heroRef, 0.5);
+  const servicesInView = useOnScreen(servicesRef, 0.5);
+  const aboutInView = useOnScreen(aboutRef, 0.5);
+  const faqInView = useOnScreen(faqRef, 0.5);
+  const contactInView = useOnScreen(contactRef, 0.5);
+
+  useEffect(() => {
+    if (contactInView) {
+      setActiveSection('contact');
+    } else if (faqInView) {
+      setActiveSection('faq');
+    } else if (aboutInView) {
+      setActiveSection('about');
+    } else if (servicesInView) {
+      setActiveSection('services');
+    } else if (heroInView) {
+      setActiveSection('hero');
+    }
+  }, [heroInView, servicesInView, aboutInView, faqInView, contactInView]);
+
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <Header />
+      <Header activeSection={activeSection} />
       <main className="flex-1">
-        <section ref={heroRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
+        <section ref={heroRef} id="hero" className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
