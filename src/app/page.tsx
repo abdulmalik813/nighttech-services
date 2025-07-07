@@ -200,15 +200,17 @@ export default function Home() {
               <p className="text-muted-foreground md:text-xl/relaxed">
                 We’ve built <span className="bg-accent text-primary px-2 rounded-md">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
               </p>
-              <p className="text-muted-foreground md:text-xl/relaxed">
-                Each NightTech Site is:
-              </p>
-              <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2 text-left max-w-md">
-                <li>• <span className="bg-accent text-primary px-2 rounded-md">Custom-tailored</span> to match your brand</li>
-                <li>• Designed for a <span className="bg-accent text-primary px-2 rounded-md">mobile-first experience</span></li>
-                <li>• <span className="bg-accent text-primary px-2 rounded-md">SEO-ready</span> to get you found fast</li>
-                <li>• Built to <span className="bg-accent text-primary px-2 rounded-md">convert visitors into leads or sales</span></li>
-              </ul>
+              <div className="inline-block text-left">
+                <p className="text-muted-foreground md:text-xl/relaxed">
+                  Each NightTech Site is:
+                </p>
+                <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2">
+                  <li>• <span className="bg-accent text-primary px-2 rounded-md">Custom-tailored</span> to match your brand</li>
+                  <li>• Designed for a <span className="bg-accent text-primary px-2 rounded-md">mobile-first experience</span></li>
+                  <li>• <span className="bg-accent text-primary px-2 rounded-md">SEO-ready</span> to get you found fast</li>
+                  <li>• Built to <span className="bg-accent text-primary px-2 rounded-md">convert visitors into leads or sales</span></li>
+                </ul>
+              </div>
               <p className="text-muted-foreground md:text-xl/relaxed">
                 We combine <span className="bg-accent text-primary px-2 rounded-md">speed with strategy</span>, <span className="bg-accent text-primary px-2 rounded-md">clean design with real results</span>. Your site doesn’t just look great — it <span className="bg-accent text-primary px-2 rounded-md">works hard behind the scenes</span> to grow your business.
               </p>
