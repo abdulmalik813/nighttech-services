@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { FilePlus, FileEdit, TrendingUp, Mails, Palette, Phone, Mail, MapPin } from 'lucide-react';
+import { FilePlus, FileEdit, TrendingUp, Mails, Palette, Phone, Mail, MapPin, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -60,7 +60,7 @@ export default function Home() {
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('hero.png')" }}
+            style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
             data-ai-hint="team collaboration"
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -166,6 +166,19 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
+                <CardHeader className="items-center">
+                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
+                    <Briefcase className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="mt-4">Business Solutions</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Custom solutions for your business, like order management systems and other productivity tools.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -174,9 +187,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Who We Are</h2>
+              <p className="text-2xl font-semibold tracking-tight">
                 <span className="bg-accent text-primary px-2">Frustrated with slow, outdated websites that don't perform?</span>
-              </h2>
+              </p>
               <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                 <p>
                   <span className="bg-accent text-primary px-2">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At SwiftSites, we close the gap between your vision and execution.
