@@ -255,7 +255,7 @@ export default function Home() {
                 <li>Fill out our <a href="#contact" className="bg-accent text-primary px-2 rounded-md font-semibold transition-colors hover:bg-accent/90">quick form</a> — it helps us understand your goals, brand, and vision.</li>
                 <li>We’ll send you a clear proposal with timeline, pricing, and sample direction.</li>
                 <li>Approve the plan and secure your project with a simple 50% deposit.</li>
-                <li>We get to work. You’ll see results within 48–72 hours.</li>
+                <li>We get to work. You’ll see results as low as 48 hours.</li>
                 <li>When you’re 100% satisfied, pay the final 50% and we launch your live website.</li>
               </ol>
               <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
@@ -316,6 +316,7 @@ export default function Home() {
         <section id="contact" ref={contactRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Need more information?</div>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
                 Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach us through our contact details.
