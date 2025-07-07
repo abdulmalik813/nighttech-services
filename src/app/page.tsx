@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 scroll-m-16">
           <div className="container">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-card scroll-m-16">
           <div className="container grid items-center justify-center gap-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 scroll-m-16">
           <div className="container grid items-center justify-center gap-8">
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
