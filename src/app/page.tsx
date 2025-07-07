@@ -1,3 +1,6 @@
+'use client';
+
+import { useRef } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -5,18 +8,33 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Server, Code, ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { useOnScreen } from '@/hooks/use-on-screen';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const isHeroVisible = useOnScreen(heroRef);
+  const isServicesVisible = useOnScreen(servicesRef);
+  const isAboutVisible = useOnScreen(aboutRef);
+  const isFaqVisible = useOnScreen(faqRef);
+  const isContactVisible = useOnScreen(contactRef);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
-        <section className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
+        <section ref={heroRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4 animate-in fade-in-0 slide-in-from-left-24 duration-1000">
+              <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
                     Elevate Your Business with NightTech
@@ -40,15 +58,15 @@ export default function Home() {
                 height="400"
                 alt="Abstract technology graphic"
                 data-ai-hint="technology abstract"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last animate-in fade-in-0 slide-in-from-right-24 duration-1000"
+                className={cn("mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24')}
               />
             </div>
           </div>
         </section>
 
-        <section id="services" className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
+        <section id="services" ref={servicesRef} className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-500">
+            <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Offer</h2>
@@ -58,7 +76,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 mt-12">
-              <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-500" style={{ animationDelay: '200ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <Code className="h-8 w-8" />
@@ -71,7 +89,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-500" style={{ animationDelay: '400ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <Server className="h-8 w-8" />
@@ -84,7 +102,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="hover:shadow-lg hover:scale-105 transition-transform duration-300 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-500" style={{ animationDelay: '600ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <ShieldCheck className="h-8 w-8" />
@@ -101,9 +119,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
+        <section id="about" ref={aboutRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
           <div className="container grid items-center justify-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className="space-y-4 text-center lg:text-left animate-in fade-in-0 slide-in-from-left-12 duration-700">
+            <div className={cn("space-y-4 text-center lg:text-left transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed lg:mx-0">
                 Our mission is to empower businesses with reliable and innovative technology. We believe in building partnerships based on trust, quality, and a shared vision for success. Our values of integrity, excellence, and dedication guide everything we do.
@@ -115,21 +133,63 @@ export default function Home() {
               height="310"
               alt="Team collaborating in an office"
               data-ai-hint="team collaboration"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last animate-in fade-in-0 slide-in-from-right-12 duration-700"
+              className={cn("mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}
             />
           </div>
         </section>
 
-        <section id="contact" className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
+        <section id="faq" ref={faqRef} className="w-full min-h-screen flex items-center scroll-pt-[64px] overflow-hidden">
+          <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">FAQ</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Frequently Asked Questions</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Have questions? We've got answers. Here are some of the most common questions we get.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl w-full mt-12">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What kind of technologies do you specialize in?</AccordionTrigger>
+                  <AccordionContent>
+                    We specialize in modern web technologies including React, Next.js, and Node.js for backend services. For cloud infrastructure, we are experts in Google Cloud and AWS. Our cybersecurity services cover a wide range of tools and best practices.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How long does a typical project take?</AccordionTrigger>
+                  <AccordionContent>
+                    The project timeline varies greatly depending on the scope and complexity. A simple marketing website might take 4-6 weeks, while a complex web application could take several months. We provide a detailed timeline after our initial discovery phase.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>How do you handle project communication and updates?</AccordionTrigger>
+                  <AccordionContent>
+                    We believe in transparent and frequent communication. We use tools like Slack for daily check-ins and schedule weekly video calls for progress reports and demos. You'll always be in the loop.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Do you offer support after the project is launched?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we offer various support and maintenance packages to ensure your application remains secure, updated, and performant after launch. We can tailor a support plan that fits your needs.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" ref={contactRef} className="w-full min-h-screen flex items-center bg-card scroll-pt-[64px] overflow-hidden">
           <div className="container grid items-center gap-8 px-4 md:px-6">
-            <div className="space-y-2 text-center animate-in fade-in-0 slide-in-from-bottom-12 duration-500">
+            <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">
                 Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach us through our contact details.
               </p>
             </div>
             <div className="mx-auto w-full max-w-7xl grid md:grid-cols-2 gap-12">
-              <div className="flex flex-col justify-center space-y-6 animate-in fade-in-0 slide-in-from-left-12 duration-700">
+              <div className={cn("flex flex-col justify-center space-y-6 transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
                 <h3 className="text-xl font-bold text-center md:text-left">Get in Touch Directly</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 group">
@@ -152,7 +212,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Card className="animate-in fade-in-0 slide-in-from-right-12 duration-700">
+              <Card className={cn("transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}>
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
                 </CardHeader>

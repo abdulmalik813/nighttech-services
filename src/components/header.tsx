@@ -17,6 +17,9 @@ export function Header() {
         <Button asChild variant="ghost">
           <Link href="#about" prefetch={false}>About</Link>
         </Button>
+        <Button asChild variant="ghost">
+          <Link href="#faq" prefetch={false}>FAQ</Link>
+        </Button>
         <Button asChild>
           <Link href="#contact" prefetch={false}>Contact Us</Link>
         </Button>
@@ -52,6 +55,11 @@ export function Header() {
               <SheetClose asChild>
                 <Link href="#about" className="text-muted-foreground hover:text-foreground" prefetch={false}>
                   About
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link href="#faq" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+                  FAQ
                 </Link>
               </SheetClose>
               <SheetClose asChild>
