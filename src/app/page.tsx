@@ -203,7 +203,7 @@ export default function Home() {
               <p className="text-muted-foreground md:text-xl/relaxed">
                 Each NightTech Site is:
               </p>
-              <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2 text-left max-w-md mx-auto">
+              <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2 text-left max-w-md">
                 <li>• <span className="bg-accent text-primary px-2 rounded-md">Custom-tailored</span> to match your brand</li>
                 <li>• Designed for a <span className="bg-accent text-primary px-2 rounded-md">mobile-first experience</span></li>
                 <li>• <span className="bg-accent text-primary px-2 rounded-md">SEO-ready</span> to get you found fast</li>
