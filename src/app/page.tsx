@@ -102,10 +102,9 @@ export default function Home() {
         <section 
           id="services" 
           ref={servicesRef} 
-          className="relative w-full scroll-mt-20 overflow-hidden py-20 bg-cover bg-center flex items-center"
-          style={{ backgroundImage: "url('/services.png')" }}>
+          className="w-full scroll-mt-20 overflow-hidden py-20 flex items-center bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
           <div className="container px-4 md:px-6">
-            <div className={cn("flex flex-col items-start space-y-4 text-left transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Offer</h2>
@@ -114,7 +113,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 mt-12">
+            <div className="mt-12 flex w-full max-w-3xl flex-col gap-8">
               <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
                 <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
                   <FilePlus className="h-8 w-8" />
