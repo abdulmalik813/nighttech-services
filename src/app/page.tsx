@@ -10,13 +10,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, Mail, MapPin, Star } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { TiktokIcon } from '@/components/tiktok-icon';
 
 const testimonials = [
   {
@@ -220,7 +221,7 @@ export default function Home() {
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="#how-to-begin">Begin</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline">
+                  <Button asChild size="lg" variant="outline" className="bg-accent/20 text-accent-foreground hover:bg-accent/30">
                     <Link href="#services">What We Offer</Link>
                   </Button>
                   <Button asChild size="lg" variant="default">
@@ -301,7 +302,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
@@ -327,7 +328,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -350,7 +351,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -376,7 +377,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -424,7 +425,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -487,7 +488,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
@@ -517,6 +518,17 @@ export default function Home() {
                        <MapPin className="h-5 w-5" />
                      </div>
                     <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
+                  </div>
+                  <div className="flex items-center gap-4 pt-4">
+                    <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+                        <Facebook className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+                        <Instagram className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Tiktok">
+                        <TiktokIcon className="h-6 w-6" />
+                    </Link>
                   </div>
                 </div>
               </div>
