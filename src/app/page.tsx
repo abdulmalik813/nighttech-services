@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24">
+        <section id="services" ref={servicesRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
           <div className="container px-4 md:px-6">
             <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 mt-12">
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <FilePlus className="h-8 w-8" />
@@ -114,7 +114,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <FileEdit className="h-8 w-8" />
@@ -127,7 +127,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <TrendingUp className="h-8 w-8" />
@@ -140,7 +140,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <Mails className="h-8 w-8" />
@@ -153,7 +153,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
+              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
                 <CardHeader className="items-center">
                   <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
                     <Palette className="h-8 w-8" />
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -192,7 +192,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -240,7 +240,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-48 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
