@@ -17,7 +17,6 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { TiktokIcon } from '@/components/tiktok-icon';
 
 const testimonials = [
   {
@@ -525,9 +524,6 @@ export default function Home() {
                     </Link>
                     <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
                         <Instagram className="h-6 w-6" />
-                    </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Tiktok">
-                        <TiktokIcon className="h-6 w-6" />
                     </Link>
                   </div>
                 </div>
