@@ -53,15 +53,27 @@ export default function Home() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header activeSection={activeSection} />
       <main className="flex-1">
-        <section ref={heroRef} id="hero" className="w-full min-h-screen flex items-center bg-card overflow-hidden">
-          <div className="container px-4 md:px-6 py-12 md:py-24">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <section
+          ref={heroRef}
+          id="hero"
+          className="relative w-full flex items-center overflow-hidden scroll-mt-32"
+          style={{
+            minHeight: 'calc(100vh - 4rem)',
+            backgroundImage: "url('https://placehold.co/1920x1080.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          data-ai-hint="technology abstract"
+        >
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative container px-4 md:px-6 py-12 md:py-24">
+            <div className="max-w-2xl">
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-white">
                     Elevate Your Business with NightTech
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-gray-200 md:text-xl">
                     We provide professional, cutting-edge technology services to drive your success. From web development to robust cybersecurity, we've got you covered.
                   </p>
                 </div>
@@ -69,24 +81,16 @@ export default function Home() {
                   <Button asChild size="lg">
                     <a href="#services">Our Services</a>
                   </Button>
-                  <Button asChild variant="outline" size="lg">
+                  <Button asChild variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
                     <a href="#contact">Get in Touch</a>
                   </Button>
                 </div>
               </div>
-              <Image
-                src="https://placehold.co/600x400.png"
-                width="600"
-                height="400"
-                alt="Abstract technology graphic"
-                data-ai-hint="technology abstract"
-                className={cn("mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24')}
-              />
             </div>
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full min-h-screen scroll-mt-32 overflow-hidden">
+        <section id="services" ref={servicesRef} className="w-full scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
           <div className="container px-4 md:px-6 py-12 md:py-24">
             <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
@@ -141,7 +145,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full min-h-screen bg-card scroll-mt-32 overflow-hidden">
+        <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
           <div className="container grid items-center gap-6 px-4 py-12 md:py-24 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className={cn("space-y-4 text-center lg:text-left transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
@@ -160,7 +164,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full min-h-screen scroll-mt-32 overflow-hidden">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
           <div className={cn("container px-4 md:px-6 py-12 md:py-24 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -202,8 +206,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full min-h-screen bg-card scroll-mt-32 overflow-hidden">
-          <div className="container grid items-center gap-8 px-4 md:px-6 py-12 md:py-24">
+        <section id="contact" ref={contactRef} className="w-full bg-card scroll-mt-32 overflow-hidden" style={{minHeight: 'calc(100vh - 4rem)'}}>
+          <div className="container grid items-center justify-center gap-8 px-4 md:px-6 py-12 md:py-24">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Contact Us</h2>
               <p className="text-muted-foreground max-w-[600px] mx-auto">

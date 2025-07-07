@@ -1,17 +1,31 @@
+'use client';
+
+import { useRef, useState, useEffect } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useOnScreen } from '@/hooks/use-on-screen';
+import { cn } from '@/lib/utils';
 
 export default function PrivacyPolicy() {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const isContentVisible = useOnScreen(contentRef, 0.1);
+
+  const [lastUpdated, setLastUpdated] = useState('');
+
+  useEffect(() => {
+    setLastUpdated(new Date().toLocaleDateString());
+  }, []);
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1 bg-background">
         <div className="container px-4 md:px-6 py-12 md:py-24 lg:py-32">
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div ref={contentRef} className={cn("max-w-3xl mx-auto space-y-6 transition-all duration-1000", isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-foreground">Privacy Policy</h1>
-            <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString()}</p>
+            <p className="text-muted-foreground">Last updated: {lastUpdated}</p>
             
             <div className="space-y-4 text-foreground">
               <h2 className="text-2xl font-bold">1. Information We Collect</h2>
