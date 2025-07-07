@@ -13,6 +13,7 @@ import { FilePlus, FileEdit, TrendingUp, Mails, Palette, Phone, Mail, MapPin, Br
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,7 @@ export default function Home() {
         <section
           ref={heroRef}
           id="hero"
-          className="relative w-full h-screen flex items-center overflow-hidden"
+          className="relative w-full min-h-screen flex items-center overflow-hidden"
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -90,7 +91,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <a href="#how-to-begin">Begin</a>
+                    <Link href="#how-to-begin">Begin</Link>
                   </Button>
                 </div>
               </div>
@@ -98,7 +99,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
+        <section id="services" ref={servicesRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
@@ -192,7 +193,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
@@ -218,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -241,7 +242,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -254,7 +255,7 @@ export default function Home() {
             </div>
             <div className="mx-auto max-w-3xl w-full mt-12">
               <ol className="list-decimal list-inside space-y-4 text-muted-foreground md:text-lg text-left">
-                <li>Fill out our <a href="#contact" className="bg-accent text-primary px-2 rounded-md font-semibold transition-colors hover:bg-accent/90">quick form</a> — it helps us understand your goals, brand, and vision.</li>
+                <li>Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-primary px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact">quick form</Link></Button> — it helps us understand your goals, brand, and vision.</li>
                 <li>We’ll send you a clear proposal with timeline, pricing, and sample direction.</li>
                 <li>Approve the plan and secure your project with a simple 50% deposit.</li>
                 <li>We get to work. You’ll see results as low as 48 hours.</li>
@@ -267,7 +268,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-r from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 min-h-screen flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -315,7 +316,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full scroll-mt-16 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-12 md:py-24 bg-gradient-to-l from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 min-h-screen flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
