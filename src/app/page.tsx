@@ -145,21 +145,23 @@ export default function Home() {
         </section>
 
         <section id="about" ref={aboutRef} className="w-full bg-card scroll-mt-48 overflow-hidden py-12 md:py-24">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className={cn("space-y-4 text-center lg:text-left transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">About NightTech</h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed lg:mx-0">
-                Our mission is to empower businesses with reliable and innovative technology. We believe in building partnerships based on trust, quality, and a shared vision for success. Our values of integrity, excellence, and dedication guide everything we do.
-              </p>
+          <div className="container px-4 md:px-6">
+            <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+                <span className="bg-accent text-primary px-2">Frustrated with slow, outdated websites that don't perform?</span>
+              </h2>
+              <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
+                <p>
+                  <span className="bg-accent text-primary px-2">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At SwiftSites, we close the gap between your vision and execution.
+                </p>
+                <p>
+                  We build <span className="bg-accent text-primary px-2">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
+                </p>
+                <p>
+                  Whether you're a growing startup or an established brand ready to level up, we bring speed, strategy, and sharp design to every project — including expert SEO that gets you found.
+                </p>
+              </div>
             </div>
-            <Image
-              src="https://placehold.co/550x310.png"
-              width="550"
-              height="310"
-              alt="Team collaborating in an office"
-              data-ai-hint="team collaboration"
-              className={cn("mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last transition-all duration-700", isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}
-            />
           </div>
         </section>
 
@@ -177,27 +179,33 @@ export default function Home() {
             <div className="mx-auto max-w-3xl w-full mt-12">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>What kind of technologies do you specialize in?</AccordionTrigger>
+                  <AccordionTrigger>How long does it take to build a site?</AccordionTrigger>
                   <AccordionContent>
-                    We specialize in modern web technologies including React, Next.js, and Node.js for backend services. For cloud infrastructure, we are experts in Google Cloud and AWS. Our cybersecurity services cover a wide range of tools and best practices.
+                    Most projects are completed in 3–5 business days, depending on complexity.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>How long does a typical project take?</AccordionTrigger>
+                  <AccordionTrigger>Do I need to pay everything upfront?</AccordionTrigger>
                   <AccordionContent>
-                    The project timeline varies greatly depending on the scope and complexity. A simple marketing website might take 4-6 weeks, while a complex web application could take several months. We provide a detailed timeline after our initial discovery phase.
+                    No — we use a secure 50/50 payment model to protect both sides.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>How do you handle project communication and updates?</AccordionTrigger>
+                  <AccordionTrigger>What if I don’t like the first draft?</AccordionTrigger>
                   <AccordionContent>
-                    We believe in transparent and frequent communication. We use tools like Slack for daily check-ins and schedule weekly video calls for progress reports and demos. You'll always be in the loop.
+                    We revise quickly until you're 100% happy with the result.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Do you offer support after the project is launched?</AccordionTrigger>
+                  <AccordionTrigger>Will my website work on phones?</AccordionTrigger>
                   <AccordionContent>
-                    Yes, we offer various support and maintenance packages to ensure your application remains secure, updated, and performant after launch. We can tailor a support plan that fits your needs.
+                    Absolutely. Every SwiftSite is built mobile-first and fully responsive.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Do you offer SEO?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. All sites include expert on-page SEO to help you rank and get found.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
