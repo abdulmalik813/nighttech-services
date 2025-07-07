@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetTrigger, SheetContent, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Mountain, Menu } from 'lucide-react';
 
 export function Header() {
@@ -30,6 +30,9 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:max-w-sm">
+            <SheetHeader>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
+            </SheetHeader>
             <nav className="grid gap-6 text-lg font-medium p-6">
               <SheetClose asChild>
                 <Link
