@@ -99,9 +99,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" ref={servicesRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section 
+          id="services" 
+          ref={servicesRef} 
+          className="relative w-full scroll-mt-20 overflow-hidden py-20 bg-cover bg-center flex items-center"
+          style={{ backgroundImage: "url('/services.png')" }}>
           <div className="container px-4 md:px-6">
-            <div className={cn("flex flex-col items-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className={cn("flex flex-col items-start space-y-4 text-left transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Offer</h2>
@@ -110,90 +114,78 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12 mt-12">
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <FilePlus className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">New Websites</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+            <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 mt-12">
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <FilePlus className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">New Websites</h3>
+                  <p className="text-muted-foreground mt-2">
                     Custom, responsive, and high-performance websites built from scratch to perfectly match your brand.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <FileEdit className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">Website Editing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+                </div>
+              </div>
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <FileEdit className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Website Editing</h3>
+                  <p className="text-muted-foreground mt-2">
                     Update and enhance your existing website with new features, content, and a modern design refresh.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <TrendingUp className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">SEO Optimization</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+                </div>
+              </div>
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <TrendingUp className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">SEO Optimization</h3>
+                  <p className="text-muted-foreground mt-2">
                     Improve your search engine ranking, increase organic traffic, and get discovered by more customers.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <Mails className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">Marketing Emails</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+                </div>
+              </div>
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <Mails className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Marketing Emails</h3>
+                  <p className="text-muted-foreground mt-2">
                     Engage your audience with targeted, automated email campaigns that drive conversions and build loyalty.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <Palette className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">Email Designs</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+                </div>
+              </div>
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <Palette className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Email Designs</h3>
+                  <p className="text-muted-foreground mt-2">
                     Beautiful, responsive, and brand-consistent email templates that look great in any inbox.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className={cn("text-center transition-all duration-500 hover:shadow-lg hover:scale-105 bg-transparent border-0", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
-                <CardHeader className="items-center">
-                  <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex">
-                    <Briefcase className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">Business Solutions</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
+                </div>
+              </div>
+              <div className={cn("flex items-start gap-6 transition-all duration-500 hover:bg-muted/20 p-4 rounded-lg", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
+                <div className="bg-primary text-primary-foreground rounded-full p-4 inline-flex mt-1 shrink-0">
+                  <Briefcase className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Business Solutions</h3>
+                  <p className="text-muted-foreground mt-2">
                     Custom solutions for your business, like order management systems and other productivity tools.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
@@ -219,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container px-4 md:px-6">
             <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
@@ -242,7 +234,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -268,7 +260,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+        <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -316,7 +308,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-32 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
