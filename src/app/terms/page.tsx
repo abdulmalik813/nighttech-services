@@ -22,7 +22,7 @@ export default function TermsOfService() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1 bg-background">
-        <div className="container px-4 md:px-6 py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6 pt-24 pb-12 md:py-24 lg:py-32">
           <div ref={contentRef} className={cn("max-w-3xl mx-auto space-y-6 transition-all duration-1000", isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-foreground">Terms of Service</h1>
             <p className="text-muted-foreground">Last updated: {lastUpdated}</p>
