@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
+import { useToast } from '@/hooks/use-toast';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -56,6 +57,59 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const { toast } = useToast();
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isCooldown, setIsCooldown] = useState(false);
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isCooldown) {
+      toast({
+        title: 'Slow down!',
+        description: 'Please wait a moment before sending another message.',
+        variant: 'destructive',
+      });
+      return;
+    }
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Message Sent!',
+          description: "Thanks for reaching out. We'll get back to you soon.",
+        });
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        const errorData = await response.json();
+        toast({
+          title: 'Uh oh! Something went wrong.',
+          description: errorData.message || 'There was a problem sending your message.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Uh oh! Something went wrong.',
+        description: 'An unexpected error occurred. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+      setIsCooldown(true);
+      setTimeout(() => setIsCooldown(false), 5000);
+    }
+  };
+
   const heroRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const ourWorkRef = useRef<HTMLDivElement>(null);
@@ -471,20 +525,46 @@ export default function Home() {
                   <CardTitle>Send us a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-4">
+                  <form className="space-y-4" onSubmit={handleContactSubmit}>
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Enter your name" />
+                      <Input 
+                        id="name" 
+                        placeholder="Enter your name"
+                        value={formState.name}
+                        onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                        required
+                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="Enter your email" />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        value={formState.email}
+                        onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
-                      <Textarea id="message" placeholder="Enter your message" className="min-h-[120px]" />
+                      <Textarea 
+                        id="message" 
+                        placeholder="Enter your message" 
+                        className="min-h-[120px]" 
+                        value={formState.message}
+                        onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                        required
+                      />
                     </div>
-                    <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Send Message</Button>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                      disabled={isLoading || isCooldown}
+                    >
+                      {isLoading ? 'Sending...' : 'Send Message'}
+                    </Button>
                   </form>
                 </CardContent>
               </Card>
