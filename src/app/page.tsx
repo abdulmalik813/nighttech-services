@@ -56,7 +56,7 @@ export default function Home() {
         <section
           ref={heroRef}
           id="hero"
-          className="relative w-full flex items-center overflow-hidden scroll-mt-32"
+          className="relative w-full h-screen flex items-center overflow-hidden scroll-mt-32"
           style={{
             backgroundImage: "url('hero.png')",
             backgroundSize: 'cover',
@@ -65,7 +65,7 @@ export default function Home() {
           data-ai-hint="team collaboration"
         >
           <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 container px-4 md:px-6 py-12 md:py-24">
+          <div className="relative z-10 container px-4 md:px-6">
             <div className="max-w-2xl">
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
