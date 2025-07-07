@@ -59,7 +59,7 @@ export default function Home() {
           className="relative w-full flex items-center overflow-hidden scroll-mt-32"
           style={{
             minHeight: 'calc(100vh - 4rem)',
-            backgroundImage: "url('https://storage.googleapis.com/gweb-aip-dev.appspot.com/work_fc20914a-8f92-494f-a889-f5c719992d95.jpeg')",
+            backgroundImage: "url('hero.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -71,7 +71,7 @@ export default function Home() {
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-white">
-                    Elevate Your Business with NightTech
+                    Elevate <span className="text-accent">Your Business</span> with NightTech
                   </h1>
                   <p className="max-w-[600px] text-gray-200 md:text-xl">
                     We provide professional, cutting-edge technology services to drive your success. From web development to robust cybersecurity, we've got you covered.
