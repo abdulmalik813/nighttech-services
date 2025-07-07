@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Star } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -23,30 +23,35 @@ const testimonials = [
     role: 'Founder of Bloom & Co.',
     quote: 'NightTech Services transformed our online presence. Our new site is not only beautiful but also incredibly fast. We saw a 40% increase in leads within the first month!',
     avatar: 'https://placehold.co/100x100.png',
+    rating: 5,
   },
   {
     name: 'Mike R.',
     role: 'Owner, Apex Fitness',
     quote: 'The team was professional, responsive, and delivered exactly what we needed. The mobile experience is seamless, and our members love it.',
     avatar: 'https://placehold.co/100x100.png',
+    rating: 5,
   },
   {
     name: 'Jessica T.',
     role: 'Creative Director, Artisan Designs',
     quote: "Working with NightTech was a breeze. They understood our brand and translated it into a stunning, high-performing website that truly represents us.",
     avatar: 'https://placehold.co/100x100.png',
+    rating: 5,
   },
    {
     name: 'David Chen',
     role: 'CEO, Tech Innovators',
     quote: "The SEO optimization they provided was a game-changer. We're now ranking on the first page for our key terms, and organic traffic has doubled.",
     avatar: 'https://placehold.co/100x100.png',
+    rating: 5,
   },
   {
     name: 'Emily B.',
     role: 'eCommerce Manager, The Daily Grind',
     quote: 'Our sales conversion rate has skyrocketed since launching the new site. The design is clean, the checkout process is smooth, and it just works.',
     avatar: 'https://placehold.co/100x100.png',
+    rating: 5,
   }
 ];
 
@@ -363,6 +368,11 @@ export default function Home() {
                               <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint="person portrait" />
                               <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                             </Avatar>
+                             <div className="flex items-center justify-center mb-2">
+                              {Array.from({ length: testimonial.rating }).map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-accent fill-current" />
+                              ))}
+                            </div>
                             <p className="text-lg font-semibold">{testimonial.name}</p>
                             <p className="text-sm text-muted-foreground mb-4">{testimonial.role}</p>
                             <p className="text-muted-foreground">"{testimonial.quote}"</p>
@@ -379,7 +389,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+        <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
