@@ -10,11 +10,45 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { TiktokIcon } from '@/components/tiktok-icon';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+
+const testimonials = [
+  {
+    name: 'Sarah L.',
+    role: 'Founder of Bloom & Co.',
+    quote: 'NightTech Services transformed our online presence. Our new site is not only beautiful but also incredibly fast. We saw a 40% increase in leads within the first month!',
+    avatar: 'https://placehold.co/100x100.png',
+  },
+  {
+    name: 'Mike R.',
+    role: 'Owner, Apex Fitness',
+    quote: 'The team was professional, responsive, and delivered exactly what we needed. The mobile experience is seamless, and our members love it.',
+    avatar: 'https://placehold.co/100x100.png',
+  },
+  {
+    name: 'Jessica T.',
+    role: 'Creative Director, Artisan Designs',
+    quote: "Working with NightTech was a breeze. They understood our brand and translated it into a stunning, high-performing website that truly represents us.",
+    avatar: 'https://placehold.co/100x100.png',
+  },
+   {
+    name: 'David Chen',
+    role: 'CEO, Tech Innovators',
+    quote: "The SEO optimization they provided was a game-changer. We're now ranking on the first page for our key terms, and organic traffic has doubled.",
+    avatar: 'https://placehold.co/100x100.png',
+  },
+  {
+    name: 'Emily B.',
+    role: 'eCommerce Manager, The Daily Grind',
+    quote: 'Our sales conversion rate has skyrocketed since launching the new site. The design is clean, the checkout process is smooth, and it just works.',
+    avatar: 'https://placehold.co/100x100.png',
+  }
+];
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -23,6 +57,7 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const howToBeginRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const isHeroVisible = useOnScreen(heroRef, 0.2);
@@ -31,6 +66,7 @@ export default function Home() {
   const isAboutVisible = useOnScreen(aboutRef, 0.2);
   const isHowToBeginVisible = useOnScreen(howToBeginRef, 0.2);
   const isFaqVisible = useOnScreen(faqRef, 0.2);
+  const isTestimonialsVisible = useOnScreen(testimonialsRef, 0.2);
   const isContactVisible = useOnScreen(contactRef, 0.2);
 
   const [activeSection, setActiveSection] = useState('hero');
@@ -40,11 +76,14 @@ export default function Home() {
   const aboutInView = useOnScreen(aboutRef, 0.5);
   const howToBeginInView = useOnScreen(howToBeginRef, 0.5);
   const faqInView = useOnScreen(faqRef, 0.5);
+  const testimonialsInView = useOnScreen(testimonialsRef, 0.5);
   const contactInView = useOnScreen(contactRef, 0.5);
 
   useEffect(() => {
     if (contactInView) {
       setActiveSection('contact');
+    } else if (testimonialsInView) {
+      setActiveSection('testimonials');
     } else if (faqInView) {
       setActiveSection('faq');
     } else if (howToBeginInView) {
@@ -58,7 +97,7 @@ export default function Home() {
     } else if (heroInView) {
       setActiveSection('hero');
     }
-  }, [heroInView, servicesInView, ourWorkInView, aboutInView, howToBeginInView, faqInView, contactInView]);
+  }, [heroInView, servicesInView, ourWorkInView, aboutInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
 
   return (
@@ -159,6 +198,12 @@ export default function Home() {
                   <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Business Solutions</h3>
                   <p className="text-primary-foreground/80 mt-2 ml-6">
                     Custom solutions for your business, like order management systems and other productivity tools.
+                  </p>
+                </li>
+                <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1400ms' }}>
+                  <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>AI Integration</h3>
+                  <p className="text-primary-foreground/80 mt-2 ml-6">
+                    Secure and trainable knowledge base for your business.
                   </p>
                 </li>
               </ul>
@@ -289,6 +334,51 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+          <div className={cn("container px-4 md:px-6 transition-all duration-700", isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What Our Clients Say</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Real stories from businesses we’ve helped succeed.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-4xl w-full mt-12">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex flex-col items-center text-center aspect-square justify-center p-6">
+                            <Avatar className="w-16 h-16 mb-4">
+                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint="person portrait" />
+                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <p className="text-lg font-semibold">{testimonial.name}</p>
+                            <p className="text-sm text-muted-foreground mb-4">{testimonial.role}</p>
+                            <p className="text-muted-foreground">"{testimonial.quote}"</p>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
           <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
             <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
@@ -313,12 +403,6 @@ export default function Home() {
                        <Mail className="h-5 w-5" />
                     </div>
                     <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
-                       <TiktokIcon className="h-5 w-5" />
-                    </div>
-                    <a href="#" className="hover:text-accent transition-colors">@nighttechservices</a>
                   </div>
                    <div className="flex items-start gap-4 group">
                      <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">

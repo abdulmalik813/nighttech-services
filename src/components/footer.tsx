@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Facebook, Instagram } from 'lucide-react';
-import { TiktokIcon } from '@/components/tiktok-icon';
 
 export function Footer() {
   return (
@@ -24,9 +23,6 @@ export function Footer() {
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
               <Instagram className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="TikTok">
-              <TiktokIcon className="h-5 w-5" />
             </Link>
           </div>
         </nav>
