@@ -22,7 +22,7 @@ const testimonials = [
   {
     name: 'Sarah L.',
     role: 'Founder of Bloom & Co.',
-    quote: 'NightTech Services transformed our online presence. Our new site is not only beautiful but also incredibly fast. We saw a 40% increase in leads within the first month!',
+    quote: 'NightTech Services Inc. transformed our online presence. Our new site is not only beautiful but also incredibly fast. We saw a 40% increase in leads within the first month!',
     avatar: 'https://placehold.co/100x100.png',
     rating: 5,
   },
@@ -210,10 +210,10 @@ export default function Home() {
                     <span className="block mt-2"><span className="bg-accent text-accent-foreground px-2 rounded-md">Fast.</span></span>
                   </h1>
                   <p className="max-w-[600px] text-primary-foreground md:text-xl">
-                    NightTech Services helps your brand launch online — in days, not weeks.
+                    NightTech Services Inc. helps your brand launch online — in days, not weeks.
                   </p>
                   <p className="max-w-[600px] text-primary-foreground md:text-lg">
-                    NightTech Services delivers sleek, <span className="bg-accent text-primary-foreground px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary-foreground px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
+                    NightTech Services Inc. delivers sleek, <span className="bg-accent text-primary-foreground px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary-foreground px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
@@ -337,7 +337,7 @@ export default function Home() {
               </p>
               <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                 <p>
-                  <span className="bg-accent text-primary-foreground px-2 rounded-md">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services, we close the gap between your vision and execution.
+                  <span className="bg-accent text-primary-foreground px-2 rounded-md">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services Inc., we close the gap between your vision and execution.
                 </p>
                 <p>
                   We build <span className="bg-accent text-primary-foreground px-2 rounded-md">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.

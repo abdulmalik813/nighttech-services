@@ -1,6 +1,6 @@
-# Nighttech Services Website
+# NightTech Services Inc. Website
 
-This is the official website for Nighttech Services, built with Next.js and TypeScript. It provides information about the services offered by Nighttech Services.
+This is the official website for NightTech Services Inc., built with Next.js and TypeScript. It provides information about the services offered by NightTech Services Inc..
 
 ## Project Structure
 
@@ -33,7 +33,7 @@ To run the project locally:
 
 - Responsive design
 - Contact form with AI capabilities
-- Information about Nighttech Services
+- Information about NightTech Services Inc.
 
 ## Contact
 

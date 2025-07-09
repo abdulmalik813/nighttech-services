@@ -9,7 +9,7 @@ export function Header({ activeSection }: { activeSection?: string }) {
     <header className="px-4 lg:px-6 h-16 flex items-center bg-header-footer/80 backdrop-blur-sm fixed w-full top-0 z-50 border-b">
       <Link href="/" className="flex items-center justify-center group" prefetch={false}>
         <Mountain className="h-6 w-6 text-primary transition-transform group-hover:rotate-12" />
-        <span className="ml-2 text-lg font-semibold text-primary">NightTech Services</span>
+        <span className="ml-2 text-lg font-semibold text-primary">NightTech Services Inc.</span>
       </Link>
       <nav className="ml-auto hidden md:flex items-center gap-6">
         <Link href="/#services" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'services' && 'underline underline-offset-4 text-primary')}>
@@ -52,7 +52,7 @@ export function Header({ activeSection }: { activeSection?: string }) {
                   prefetch={false}
                 >
                   <Mountain className="h-6 w-6 text-primary" />
-                  <span className="">NightTech Services</span>
+                  <span className="">NightTech Services Inc.</span>
                 </Link>
               </SheetClose>
                 </SheetTitle>

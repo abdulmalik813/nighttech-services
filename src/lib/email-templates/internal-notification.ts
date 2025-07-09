@@ -17,11 +17,11 @@ export const internalNotificationTemplate = (name: string, email: string, messag
                 <td style="padding: 32px 40px; text-align: center;">
                     <!-- Logo Icon -->
                     <div style="display: inline-block; vertical-align: middle;">
-                         <img src="https://www.nighttechservices.com/logo.png" alt="NightTech Services Logo" height="32" style="height: 32px; border: 0;">
+                         <img src="https://www.nighttechservices.com/logo.png" alt="NightTech Services Inc. Logo" height="32" style="height: 32px; border: 0;">
                     </div>
                     <!-- Business Name -->
                     <div style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 22px; font-weight: 600; color: #1f2937;">
-                        NightTech Services
+                        NightTech Services Inc.
                     </div>
                 </td>
             </tr>

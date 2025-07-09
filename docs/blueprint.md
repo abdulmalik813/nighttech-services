@@ -1,4 +1,4 @@
-# **App Name**: NightTech Services
+# **App Name**: NightTech Services Inc.
 
 ## Core Features:
 

@@ -3,8 +3,8 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'NightTech Services | Professional Tech Solutions',
-  description: 'NightTech Services offers expert solutions in web development, cloud infrastructure, and cybersecurity to elevate your business.',
+  title: 'NightTech Services Inc. | Professional Tech Solutions',
+  description: 'NightTech Services Inc. offers expert solutions in web development, cloud infrastructure, and cybersecurity to elevate your business.',
   keywords: ['tech services', 'web development', 'cybersecurity', 'cloud solutions'],
 };
 

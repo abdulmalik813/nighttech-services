@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       },
     });
 
-    const fromName = process.env.EMAIL_FROM_NAME || 'NightTech Services';
+    const fromName = process.env.EMAIL_FROM_NAME || 'NightTech Services Inc.';
     const fromAddress = process.env.EMAIL_FROM_ADDRESS;
     const internalToAddress = process.env.INTERNAL_EMAIL_TO || 'info@nighttechservices.com';
 
