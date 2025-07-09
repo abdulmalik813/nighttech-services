@@ -38,6 +38,11 @@ export const customerConfirmationTemplate = (name: string) => `
                     <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px; color: #1f2937;">
                         We typically respond within <span style="background-color: #b5830e; color: #ffffff; font-weight: 600; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">1-2 business days</span>. We appreciate your patience!
                     </p>
+                    <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px; color: #1f2937;">
+                        <br>
+                        Thanks, <br>
+                        The NighTech Services Inc. Team
+                    </p>
                 </td>
             </tr>
 
