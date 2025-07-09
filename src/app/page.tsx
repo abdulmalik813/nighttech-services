@@ -206,14 +206,14 @@ export default function Home() {
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
-                    <span className="bg-accent text-primary px-2 rounded-md">Stunning</span> Websites. Delivered
-                    <span className="block mt-2"><span className="bg-accent text-primary px-2 rounded-md">Fast.</span></span>
+                    <span className="bg-accent text-primary-foreground px-2 rounded-md">Stunning</span> Websites. Delivered
+                    <span className="block mt-2"><span className="bg-accent text-primary-foreground px-2 rounded-md">Fast.</span></span>
                   </h1>
                   <p className="max-w-[600px] text-primary-foreground md:text-xl">
                     NightTech Services helps your brand launch online — in days, not weeks.
                   </p>
                   <p className="max-w-[600px] text-primary-foreground md:text-lg">
-                    NightTech Services delivers sleek, <span className="bg-accent text-primary px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
+                    NightTech Services delivers sleek, <span className="bg-accent text-primary-foreground px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary-foreground px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
@@ -307,21 +307,21 @@ export default function Home() {
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Do</h2>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                We’ve built <span className="bg-accent text-primary px-2 rounded-md">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
+                We’ve built <span className="bg-accent text-primary-foreground px-2 rounded-md">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
               </p>
               <div className="text-left">
                 <p className="text-muted-foreground md:text-xl/relaxed">
                   Each NightTech Site is:
                 </p>
                 <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2">
-                  <li>• <span className="bg-accent text-primary px-2 rounded-md">Custom-tailored</span> to match your brand</li>
-                  <li>• Designed for a <span className="bg-accent text-primary px-2 rounded-md">mobile-first experience</span></li>
-                  <li>• <span className="bg-accent text-primary px-2 rounded-md">SEO-ready</span> to get you found fast</li>
-                  <li>• Built to <span className="bg-accent text-primary px-2 rounded-md">convert visitors into leads or sales</span></li>
+                  <li>• <span className="bg-accent text-primary-foreground px-2 rounded-md">Custom-tailored</span> to match your brand</li>
+                  <li>• Designed for a <span className="bg-accent text-primary-foreground px-2 rounded-md">mobile-first experience</span></li>
+                  <li>• <span className="bg-accent text-primary-foreground px-2 rounded-md">SEO-ready</span> to get you found fast</li>
+                  <li>• Built to <span className="bg-accent text-primary-foreground px-2 rounded-md">convert visitors into leads or sales</span></li>
                 </ul>
               </div>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                We combine <span className="bg-accent text-primary px-2 rounded-md">speed with strategy</span>, <span className="bg-accent text-primary px-2 rounded-md">clean design with real results</span>. Your site doesn’t just look great — it <span className="bg-accent text-primary px-2 rounded-md">works hard behind the scenes</span> to grow your business.
+                We combine <span className="bg-accent text-primary-foreground px-2 rounded-md">speed with strategy</span>, <span className="bg-accent text-primary-foreground px-2 rounded-md">clean design with real results</span>. Your site doesn’t just look great — it <span className="bg-accent text-primary-foreground px-2 rounded-md">works hard behind the scenes</span> to grow your business.
               </p>
             </div>
           </div>
@@ -333,14 +333,14 @@ export default function Home() {
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Who We Are</h2>
               <p className="text-2xl font-semibold tracking-tight">
-                <span className="bg-accent text-primary px-2 rounded-md">Frustrated with slow, outdated websites that don't perform?</span>
+                <span className="bg-accent text-primary-foreground px-2 rounded-md">Frustrated with slow, outdated websites that don't perform?</span>
               </p>
               <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                 <p>
-                  <span className="bg-accent text-primary px-2 rounded-md">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services, we close the gap between your vision and execution.
+                  <span className="bg-accent text-primary-foreground px-2 rounded-md">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services, we close the gap between your vision and execution.
                 </p>
                 <p>
-                  We build <span className="bg-accent text-primary px-2 rounded-md">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
+                  We build <span className="bg-accent text-primary-foreground px-2 rounded-md">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
                 </p>
                 <p>
                   Whether you're a growing startup or an established brand ready to level up, we bring speed, strategy, and sharp design to every project — including expert SEO that gets you found.
@@ -357,22 +357,43 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How to Begin</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Process</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here’s how to get started in a way that’s <span className="bg-accent text-primary px-2 rounded-md">fast, smart, and safe</span> for both of us:
+                  Here’s how to get started in a way that’s <span className="bg-accent text-primary-foreground px-2 rounded-md">fast, smart, and safe</span> for both of us:
                 </p>
               </div>
             </div>
-            <div className="mx-auto max-w-3xl w-full mt-12">
-              <ol className="list-decimal list-inside space-y-4 text-muted-foreground md:text-lg text-left">
-                <li>Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-primary px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact">quick form</Link></Button> — it helps us understand your goals, brand, and vision.</li>
-                <li>We’ll send you a clear proposal with timeline, pricing, and sample direction.</li>
-                <li>Approve the plan and secure your project with a simple 50% deposit.</li>
-                <li>We get to work. You’ll see results as low as 48 hours.</li>
-                <li>When you’re 100% satisfied, pay the final 50% and we launch your live website.</li>
-              </ol>
-              <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
-                This proven system filters <span className="bg-accent text-primary px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-primary px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-primary px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
-              </p>
+            <div className="relative mt-12 w-full max-w-3xl mx-auto">
+              <div className="absolute left-5 top-0 h-full w-0.5 bg-border -translate-x-1/2" />
+              <div className="space-y-12">
+                <div className="relative pl-12">
+                  <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
+                  <h3 className="font-bold text-xl">1. Fill Out the Form</h3>
+                  <p className="text-muted-foreground mt-1">Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-primary-foreground px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact">quick form</Link></Button> — it helps us understand your goals, brand, and vision.</p>
+                </div>
+                <div className="relative pl-12">
+                  <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
+                  <h3 className="font-bold text-xl">2. Receive Your Proposal</h3>
+                  <p className="text-muted-foreground mt-1">We’ll send you a clear proposal with timeline, pricing, and sample direction.</p>
+                </div>
+                <div className="relative pl-12">
+                  <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
+                  <h3 className="font-bold text-xl">3. Secure Your Project</h3>
+                  <p className="text-muted-foreground mt-1">Approve the plan and secure your project with a simple 50% deposit.</p>
+                </div>
+                <div className="relative pl-12">
+                  <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
+                  <h3 className="font-bold text-xl">4. We Get to Work</h3>
+                  <p className="text-muted-foreground mt-1">We get to work. You’ll see results as low as 48 hours.</p>
+                </div>
+                <div className="relative pl-12">
+                  <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
+                  <h3 className="font-bold text-xl">5. Launch Your Website</h3>
+                  <p className="text-muted-foreground mt-1">When you’re 100% satisfied, pay the final 50% and we launch your live website.</p>
+                </div>
+              </div>
             </div>
+            <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
+                This proven system filters <span className="bg-accent text-primary-foreground px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-primary-foreground px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-primary-foreground px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
+            </p>
           </div>
         </section>
 
