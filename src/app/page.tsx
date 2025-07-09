@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -206,8 +206,8 @@ export default function Home() {
               <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
-                    <span className="bg-accent text-primary-foreground px-2 rounded-md">Stunning</span> Websites. Delivered
-                    <span className="block mt-2"><span className="bg-accent text-primary-foreground px-2 rounded-md">Fast.</span></span>
+                    <span className="bg-accent text-accent-foreground px-2 rounded-md">Stunning</span> Websites. Delivered
+                    <span className="block mt-2"><span className="bg-accent text-accent-foreground px-2 rounded-md">Fast.</span></span>
                   </h1>
                   <p className="max-w-[600px] text-primary-foreground md:text-xl">
                     NightTech Services helps your brand launch online — in days, not weeks.
@@ -357,7 +357,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How to Begin</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Process</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here’s how to get started in a way that’s <span className="bg-accent text-primary-foreground px-2 rounded-md">fast, smart, and safe</span> for both of us:
+                  Here’s how to get started in a way that’s <span className="bg-accent text-white px-2 rounded-md">fast, smart, and safe</span> for both of us:
                 </p>
               </div>
             </div>
@@ -367,7 +367,7 @@ export default function Home() {
                 <div className="relative pl-12">
                   <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
                   <h3 className="font-bold text-xl">1. Fill Out the Form</h3>
-                  <p className="text-muted-foreground mt-1">Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-primary-foreground px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact">quick form</Link></Button> — it helps us understand your goals, brand, and vision.</p>
+                  <p className="text-muted-foreground mt-1">Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-white px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact" className="inline-flex items-center gap-1">quick form <MousePointerClick className="h-4 w-4" /></Link></Button> — it helps us understand your goals, brand, and vision.</p>
                 </div>
                 <div className="relative pl-12">
                   <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
@@ -392,7 +392,7 @@ export default function Home() {
               </div>
             </div>
             <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
-                This proven system filters <span className="bg-accent text-primary-foreground px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-primary-foreground px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-primary-foreground px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
+                This proven system filters <span className="bg-accent text-white px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-white px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-white px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
             </p>
           </div>
         </section>
