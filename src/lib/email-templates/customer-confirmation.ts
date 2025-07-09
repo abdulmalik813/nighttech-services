@@ -1,3 +1,4 @@
+
 export const customerConfirmationTemplate = (name: string) => `
 <!DOCTYPE html>
 <html lang="en">
