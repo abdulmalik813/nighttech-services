@@ -1,3 +1,4 @@
+
 export const internalNotificationTemplate = (name: string, email: string, message: string) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -47,24 +48,41 @@ export const internalNotificationTemplate = (name: string, email: string, messag
             font-weight: 700;
             margin: 0;
         }
+        .header-subtitle {
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 4px;
+        }
         .email-body {
             padding: 30px 40px;
         }
-        .info-section {
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 24px;
         }
-        .info-section strong {
-            display: block;
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .info-section span, .info-section a {
+        .info-table td {
+            padding: 12px 0;
             font-size: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-table td.label {
+            font-weight: bold;
+            color: #555;
+            width: 100px;
+            vertical-align: top;
+        }
+        .info-table td.data {
             color: #2E3A59;
+        }
+        .info-table td.data a {
+            color: #B8860B;
             text-decoration: none;
+            font-weight: bold;
+        }
+        .info-table tr:last-child td {
+            border-bottom: none;
         }
         .message-box {
             background-color: #f9f9f9;
@@ -75,13 +93,13 @@ export const internalNotificationTemplate = (name: string, email: string, messag
             line-height: 1.6;
             white-space: pre-wrap;
             word-wrap: break-word;
+            margin-top: 8px;
         }
         .footer {
             text-align: center;
             padding: 20px 40px;
             font-size: 12px;
             color: #888888;
-            border-top: 1px solid #e0e0e0;
         }
     </style>
 </head>
@@ -93,23 +111,28 @@ export const internalNotificationTemplate = (name: string, email: string, messag
                 <td align="center" class="email-header">
                     <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
                     <h1 class="header-title">New Webform Inquiry</h1>
+                    <p class="header-subtitle">from NightTech Services</p>
                 </td>
             </tr>
             <!-- Body -->
             <tr>
                 <td class="email-body">
-                    <div class="info-section">
-                        <strong>From:</strong>
-                        <span>${name}</span>
-                    </div>
-                    <div class="info-section">
-                        <strong>Reply-To Email:</strong>
-                        <a href="mailto:${email}">${email}</a>
-                    </div>
-                    <div class="info-section">
-                        <strong>Message:</strong>
-                        <div class="message-box">${message}</div>
-                    </div>
+                    <table class="info-table" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="label">From:</td>
+                            <td class="data">${name}</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Email:</td>
+                            <td class="data"><a href="mailto:${email}">${email}</a></td>
+                        </tr>
+                        <tr>
+                            <td class="label" valign="top">Message:</td>
+                            <td class="data">
+                                <div class="message-box">${message}</div>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <!-- Footer -->
