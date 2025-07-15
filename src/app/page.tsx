@@ -19,6 +19,7 @@ import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from '@/components/ui/carousel';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { LoadingScreen } from '@/components/loading-screen';
+import Head from 'next/head';
 
 const testimonials = [
   {
@@ -57,6 +58,46 @@ const testimonials = [
     rating: 5,
   }
 ];
+
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NightTech Services Inc.",
+    "image": "https://www.nighttechservices.com/og-image.png",
+    "@id": "https://www.nighttechservices.com",
+    "url": "https://www.nighttechservices.com",
+    "telephone": "+1-902-629-9691",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30 Shady Acres Drive, Unit 4",
+      "addressLocality": "Brackley Beach",
+      "addressRegion": "PE",
+      "postalCode": "C1E 2X4",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.3685,
+      "longitude": -63.1957
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://facebook.com/nighttech",
+      "https://twitter.com/nighttech"
+    ] 
+  };
 
 export default function Home() {
   const { toast } = useToast();
@@ -207,6 +248,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <LoadingScreen isVisible={!isPageLoaded} />
       <div className={cn("flex flex-col min-h-[100dvh] transition-opacity duration-500", !isPageLoaded ? 'opacity-0' : 'opacity-100')}>
         <Header activeSection={activeSection} />
