@@ -711,7 +711,7 @@ export default function Home() {
                       <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
                     </div>
                     <div className="flex items-center gap-4 pt-4">
-                      <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+                      <Link href="https://facebook.com/nighttech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
                           <Facebook className="h-6 w-6" />
                       </Link>
                       <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">

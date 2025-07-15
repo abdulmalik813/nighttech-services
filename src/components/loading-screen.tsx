@@ -14,7 +14,7 @@ export function LoadingScreen({ isVisible }: { isVisible: boolean }) {
       <div className="flex items-center justify-center gap-2">
         <Mountain
           className="h-8 w-8 text-primary animate-bounce"
-          style={{ animationDelay: '0ms', animationDuration: '1s' }}
+          style={{ animationDuration: '1s' }}
         />
         <span className="text-xl font-semibold text-primary flex">
           {text.split('').map((char, index) => (

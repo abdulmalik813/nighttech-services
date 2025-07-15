@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 const siteConfig = {
   name: 'NightTech Services Inc.',
   url: 'https://www.nighttechservices.com',
-  description: 'NightTech Services Inc. offers expert solutions in web development, cloud infrastructure, and cybersecurity to elevate your business.',
+  description: 'NightTech Services Inc. delivers sleek, high-performing websites with sharp design, mobile optimization, and expert SEO—all completed in record time. Trusted by startups and small businesses across Canada for expert web development and digital solutions.',
   ogImage: 'https://www.nighttechservices.com/og-image.png',
   author: 'NightTech Services Inc.',
   links: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['tech services', 'web development', 'cybersecurity', 'cloud solutions', 'PEI web design', 'Canada web development'],
+  keywords: ['tech services', 'web development', 'cybersecurity', 'cloud solutions', 'PEI web design', 'Canada web development', 'fast websites', 'seo optimization'],
   authors: [{ name: siteConfig.author, url: siteConfig.url }],
   creator: siteConfig.author,
   openGraph: {

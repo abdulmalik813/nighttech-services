@@ -18,7 +18,7 @@ export function Footer() {
             Privacy Policy
           </Link>
           <div className="flex gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+            <Link href="https://facebook.com/nighttech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
