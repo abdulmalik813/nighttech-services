@@ -405,7 +405,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
                       <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
-                      <p className="font-semibold text-green-600">🎯 After grant reimbursement: Client pays only $900</p>
+                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $900 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
                   </CardFooter>
                 </Card>
@@ -436,7 +436,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
                       <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
-                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
+                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
                   </CardFooter>
                 </Card>
