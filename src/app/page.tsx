@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
@@ -59,7 +60,7 @@ const testimonials = [
 
 export default function Home() {
   const { toast } = useToast();
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formState, setFormState] = useState({ name: '', email: '', message: '', servicePackage: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [isCooldown, setIsCooldown] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -100,7 +101,7 @@ export default function Home() {
           title: 'Message Sent!',
           description: "Thanks for reaching out. We'll get back to you soon.",
         });
-        setFormState({ name: '', email: '', message: '' });
+        setFormState({ name: '', email: '', message: '', servicePackage: '' });
       } else {
         const errorData = await response.json();
         toast({
@@ -404,7 +405,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
                       <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
-                      <p className="font-semibold text-green-600">🎯 After grant reimbursement: Client pays only $800</p>
+                      <p className="font-semibold text-green-600">🎯 After grant reimbursement: Client pays only $900</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
                   </CardFooter>
                 </Card>
@@ -435,7 +436,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
                       <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
-                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay as little as $400 out-of-pocket</p>
+                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
                   </CardFooter>
                 </Card>
@@ -698,6 +699,23 @@ export default function Home() {
                           onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                           required
                         />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="servicePackage">Service Package (Optional)</Label>
+                        <Select
+                          value={formState.servicePackage}
+                          onValueChange={(value) => setFormState({ ...formState, servicePackage: value })}
+                        >
+                          <SelectTrigger id="servicePackage">
+                            <SelectValue placeholder="Select a package" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Essential Presence">🟦 Essential Presence</SelectItem>
+                            <SelectItem value="Growth Pro">🟨 Growth Pro</SelectItem>
+                            <SelectItem value="Elite Digital Suite">🟥 Elite Digital Suite</SelectItem>
+                            <SelectItem value="Other">Other/Not Sure</SelectItem>
+                          </SelectContent>
+                        </Select>
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="message">Message</Label>

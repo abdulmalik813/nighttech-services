@@ -6,7 +6,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, message, servicePackage } = body;
 
     if (!process.env.EMAIL_SERVER_HOST || !process.env.EMAIL_SERVER_USER || !process.env.EMAIL_SERVER_PASSWORD || !process.env.EMAIL_FROM_ADDRESS) {
         console.error('Email server environment variables are not set.');
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
         to: internalToAddress,
         subject: 'Webform Inquiry',
         replyTo: `"${name}" <${email}>`,
-        html: internalNotificationTemplate(name, email, message),
+        html: internalNotificationTemplate(name, email, message, servicePackage),
     });
 
     // Send customer confirmation email
