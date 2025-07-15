@@ -21,6 +21,9 @@ export function Header({ activeSection }: { activeSection?: string }) {
         <Link href="/#about" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'about' && 'underline underline-offset-4 text-primary')}>
           About
         </Link>
+        <Link href="/#pricing" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'pricing' && 'underline underline-offset-4 text-primary')}>
+          Pricing
+        </Link>
         <Link href="/#how-to-begin" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'how-to-begin' && 'underline underline-offset-4 text-primary')}>
           Process
         </Link>
@@ -71,6 +74,11 @@ export function Header({ activeSection }: { activeSection?: string }) {
               <SheetClose asChild>
                 <Link href="/#about" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'about' && 'text-primary underline underline-offset-4')} prefetch={false}>
                   About
+                </Link>
+              </SheetClose>
+               <SheetClose asChild>
+                <Link href="/#pricing" className={cn("text-muted-foreground hover:text-foreground", activeSection === 'pricing' && 'text-primary underline underline-offset-4')} prefetch={false}>
+                  Pricing
                 </Link>
               </SheetClose>
               <SheetClose asChild>

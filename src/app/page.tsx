@@ -4,13 +4,13 @@ import { useRef, useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -126,6 +126,7 @@ export default function Home() {
   const servicesRef = useRef<HTMLDivElement>(null);
   const ourWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
   const howToBeginRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -135,6 +136,7 @@ export default function Home() {
   const isServicesVisible = useOnScreen(servicesRef, 0.2);
   const isOurWorkVisible = useOnScreen(ourWorkRef, 0.2);
   const isAboutVisible = useOnScreen(aboutRef, 0.2);
+  const isPricingVisible = useOnScreen(pricingRef, 0.2);
   const isHowToBeginVisible = useOnScreen(howToBeginRef, 0.2);
   const isFaqVisible = useOnScreen(faqRef, 0.2);
   const isTestimonialsVisible = useOnScreen(testimonialsRef, 0.2);
@@ -145,6 +147,7 @@ export default function Home() {
   const servicesInView = useOnScreen(servicesRef, 0.5);
   const ourWorkInView = useOnScreen(ourWorkRef, 0.5);
   const aboutInView = useOnScreen(aboutRef, 0.5);
+  const pricingInView = useOnScreen(pricingRef, 0.5);
   const howToBeginInView = useOnScreen(howToBeginRef, 0.5);
   const faqInView = useOnScreen(faqRef, 0.5);
   const testimonialsInView = useOnScreen(testimonialsRef, 0.5);
@@ -187,6 +190,8 @@ export default function Home() {
       setActiveSection('faq');
     } else if (howToBeginInView) {
       setActiveSection('how-to-begin');
+    } else if (pricingInView) {
+      setActiveSection('pricing');
     } else if (aboutInView) {
       setActiveSection('about');
     } else if (ourWorkInView) {
@@ -196,7 +201,7 @@ export default function Home() {
     } else if (heroInView) {
       setActiveSection('hero');
     }
-  }, [heroInView, servicesInView, ourWorkInView, aboutInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
+  }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
 
   return (
@@ -363,8 +368,110 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <section id="pricing" ref={pricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+            <div className={cn("container px-4 md:px-6 transition-all duration-700", isPricingVisible ? 'opacity-100' : 'opacity-0')}>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                  <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Pricing</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Website Development Packages (2025)</h2>
+                  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Choose the package that fits your needs. All packages are designed to deliver high-quality, professional websites.
+                  </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+                <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+                  <CardHeader>
+                    <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Essential Presence</CardTitle>
+                    <p className="text-muted-foreground pt-2">Professional web presence — simple, clean, and fully managed by NightTech.</p>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                    <div>
+                      <h4 className="font-semibold">Perfect for:</h4>
+                      <p className="text-muted-foreground">Small businesses, personal brands, and service providers</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Includes:</h4>
+                      <ul className="space-y-2 mt-2">
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Responsive, mobile-friendly design (up to 5 pages)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Built-in contact form (sends to your email)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Custom-branded look and layout</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>NightTech handles all content updates</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 5 GB secure storage</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting fully included</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($1,000 back)</span></li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                      <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
+                      <p className="font-semibold text-green-600">🎯 After grant reimbursement: Client pays only $800</p>
+                      <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
+                  </CardFooter>
+                </Card>
+                <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
+                  <CardHeader>
+                    <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Growth Pro</CardTitle>
+                    <p className="text-muted-foreground pt-2">Scalable website solution with content tools and SEO control.</p>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                     <div>
+                      <h4 className="font-semibold">Perfect for:</h4>
+                      <p className="text-muted-foreground">Retailers, coaches, consultants, and growing businesses</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Includes everything in Essential Presence, plus:</h4>
+                      <ul className="space-y-2 mt-2">
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Easy-to-use dashboard (edit your own content)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>CMS tools (blog posts, news, team bios, etc.)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Upload and manage media anytime</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Basic on-page SEO tools (meta titles, tags, alt text)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 10 GB storage</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting included</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for CDAP $2,400 grant (if business qualifies)</span></li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                      <h4 className="font-bold text-lg">💰 Investment: $2,400–$3,200</h4>
+                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay $0 out-of-pocket</p>
+                      <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
+                  </CardFooter>
+                </Card>
+                <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '400ms' }}>
+                   <CardHeader>
+                    <CardTitle className="text-red-600 dark:text-red-400">🟥 Elite Digital Suite</CardTitle>
+                    <p className="text-muted-foreground pt-2">Bespoke, high-performance digital solution with automation and custom development.</p>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                    <div>
+                      <h4 className="font-semibold">Perfect for:</h4>
+                      <p className="text-muted-foreground">Professional firms, clinics, tech startups, and large organizations</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Includes everything in Growth Pro, plus:</h4>
+                      <ul className="space-y-2 mt-2">
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Fully custom structure and design</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Online booking, membership, or e-commerce systems</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>API integrations and automations</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>CRM or third-party connections</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Admin dashboards and custom portals</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>AI tools (chatbots, automation, or predictive forms)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Starting at 15 GB storage (expandable)</span></li>
+                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Dedicated onboarding + success manager</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Full infrastructure management and security</span></li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                      <h4 className="font-bold text-lg">💰 Investment: Starting at $7,500+</h4>
+                      <p className="text-sm text-muted-foreground mt-4">💼 <span className="font-semibold">Retainer Option:</span> Ongoing optimization & reporting – $200–$500/month</p>
+                  </CardFooter>
+                </Card>
+              </div>
+            </div>
+          </section>
           
-          <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+          <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
             <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
@@ -411,7 +518,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+          <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
             <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
@@ -459,7 +566,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
+          <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
             <div className={cn("container px-4 md:px-6 transition-all duration-700", isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
@@ -522,7 +629,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
+          <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
             <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
               <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
