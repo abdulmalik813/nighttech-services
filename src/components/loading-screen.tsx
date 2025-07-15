@@ -10,7 +10,7 @@ export function LoadingScreen({ isVisible }: { isVisible: boolean }) {
       )}
     >
       <div className="flex items-center justify-center gap-2">
-        <Mountain className="h-8 w-8 text-primary animate-pulse" />
+        <Mountain className="h-8 w-8 text-primary animate-bounce" />
         <span className="text-xl font-semibold text-primary">Loading...</span>
       </div>
     </div>
