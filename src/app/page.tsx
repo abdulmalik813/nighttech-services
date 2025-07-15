@@ -398,7 +398,7 @@ export default function Home() {
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>NightTech handles all content updates</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 5 GB secure storage</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting fully included</span></li>
-                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($1,000 back)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($1,000 back, up to 50%)</span></li>
                       </ul>
                     </div>
                   </CardContent>
@@ -421,19 +421,21 @@ export default function Home() {
                     <div>
                       <h4 className="font-semibold">Includes everything in Essential Presence, plus:</h4>
                       <ul className="space-y-2 mt-2">
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>eCommerce store</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Payment solutions</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Easy-to-use dashboard (edit your own content)</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>CMS tools (blog posts, news, team bios, etc.)</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Upload and manage media anytime</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Basic on-page SEO tools (meta titles, tags, alt text)</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 10 GB storage</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting included</span></li>
-                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for CDAP $2,400 grant (if business qualifies)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($2,000 back, up to 50%)</span></li>
                       </ul>
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
-                      <h4 className="font-bold text-lg">💰 Investment: $2,400–$3,200</h4>
-                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay $0 out-of-pocket</p>
+                      <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
+                      <p className="font-semibold text-green-600">📈 Grant-eligible clients could pay as little as $400 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
                   </CardFooter>
                 </Card>
