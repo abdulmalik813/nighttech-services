@@ -7,7 +7,7 @@ export function LoadingScreen({ isVisible }: { isVisible: boolean }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] flex items-center justify-center bg-header-footer transition-opacity duration-500",
+        "fixed inset-0 z-[100] flex items-center justify-center bg-header-footer transition-opacity duration-500 animate-subtle-pulse",
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >
