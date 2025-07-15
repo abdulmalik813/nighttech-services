@@ -9,8 +9,8 @@ export function LoadingScreen({ isVisible }: { isVisible: boolean }) {
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >
-      <div className="flex items-center justify-center gap-2">
-        <Mountain className="h-8 w-8 text-primary animate-bounce" />
+      <div className="flex items-center justify-center gap-2 animate-bounce">
+        <Mountain className="h-8 w-8 text-primary" />
         <span className="text-xl font-semibold text-primary">Loading...</span>
       </div>
     </div>
