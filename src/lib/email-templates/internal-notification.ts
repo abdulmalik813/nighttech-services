@@ -15,9 +15,7 @@ export const internalNotificationTemplate = (name: string, email: string, messag
             <tr>
                 <td style="padding: 32px 40px; text-align: center; border-bottom: 1px solid #e5e7eb;">
                     <div style="display: inline-block; vertical-align: middle;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2E3A59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
-                        </svg>
+                         <img src="https://www.nighttechservices.com/logo.png" alt="NightTech Services Inc. Logo" height="32" style="height: 32px; border: 0;">
                     </div>
                     <div style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 22px; font-weight: 600; color: #2E3A59;">
                         NightTech Services Inc.
