@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
@@ -298,7 +299,7 @@ export default function Home() {
                     <Button asChild size="lg" variant="default">
                       <Link href="#how-to-begin">Our Process</Link>
                     </Button>
-                    <Button asChild size="lg" variant="default">
+                    <Button asChild size="lg" variant="outline" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
                       <Link href="#testimonials">See what others say</Link>
                     </Button>
                   </div>
