@@ -11,7 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -296,6 +296,9 @@ export default function Home() {
                       <Link href="#services">What We Offer</Link>
                     </Button>
                     <Button asChild size="lg" variant="default">
+                      <Link href="#how-to-begin">Our Process</Link>
+                    </Button>
+                    <Button asChild size="lg" variant="default">
                       <Link href="#testimonials">See what others say</Link>
                     </Button>
                   </div>
@@ -569,6 +572,14 @@ export default function Home() {
                     <p className="text-muted-foreground mt-1">When you’re 100% satisfied, pay the final 50% and we launch your live website.</p>
                   </div>
                 </div>
+              </div>
+              <div className="text-center mt-8">
+                <Button asChild size="lg">
+                  <Link href="#pricing">
+                    View Pricing
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
               <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
                   This proven system filters <span className="bg-accent text-white px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-white px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-white px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
