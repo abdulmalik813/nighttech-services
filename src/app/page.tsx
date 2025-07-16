@@ -245,6 +245,11 @@ export default function Home() {
     }
   }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
+  const handleRequestInfoClick = (packageName: string) => {
+    setFormState(prevState => ({ ...prevState, servicePackage: packageName }));
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   return (
     <>
@@ -285,7 +290,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                      <Link href="#how-to-begin">Begin</Link>
+                      <Link href="#pricing">Begin</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100">
                       <Link href="#services">What We Offer</Link>
@@ -450,10 +455,11 @@ export default function Home() {
                       </ul>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                       <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
                       <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $900 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
+                      <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
                   </CardFooter>
                 </Card>
                 <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
@@ -481,10 +487,11 @@ export default function Home() {
                       </ul>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                       <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
                       <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
+                       <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Growth Pro')}>Request Info</Button>
                   </CardFooter>
                 </Card>
                 <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '400ms' }}>
@@ -512,9 +519,10 @@ export default function Home() {
                       </ul>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-6">
+                  <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                       <h4 className="font-bold text-lg">💰 Investment: Starting at $7,500+</h4>
                       <p className="text-sm text-muted-foreground mt-4">💼 <span className="font-semibold">Retainer Option:</span> Ongoing optimization & reporting – $200–$500/month</p>
+                       <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Elite Digital Suite')}>Request Info</Button>
                   </CardFooter>
                 </Card>
               </div>
