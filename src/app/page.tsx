@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -460,8 +460,12 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
-                      <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
-                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $900 out-of-pocket</p>
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
+                        <Sparkles className="h-4 w-4" />
+                        <span>Limited Time Offer: $100 OFF!</span>
+                      </div>
+                      <h4 className="font-bold text-lg">💰 Investment: <span className="line-through text-muted-foreground/80">$1,800</span> $1,700 <span className="text-sm font-normal">(one-time)</span></h4>
+                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $850 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
                       <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
                   </CardFooter>
@@ -492,6 +496,10 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
+                        <Sparkles className="h-4 w-4" />
+                        <span>Limited Time Offer: $100 OFF!</span>
+                      </div>
                       <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
                       <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
@@ -524,6 +532,10 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
+                        <Sparkles className="h-4 w-4" />
+                        <span>Limited Time Offer: $100 OFF!</span>
+                      </div>
                       <h4 className="font-bold text-lg">💰 Investment: Starting at $7,500+</h4>
                       <p className="text-sm text-muted-foreground mt-4">💼 <span className="font-semibold">Retainer Option:</span> Ongoing optimization & reporting – $200–$500/month</p>
                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Elite Digital Suite')}>Request Info</Button>
