@@ -455,7 +455,7 @@ export default function Home() {
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>NightTech handles all content updates</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 5 GB secure storage</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting fully included</span></li>
-                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($1,000 back, up to 50%)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant (50% of project costs, up to $1,000)</span></li>
                       </ul>
                     </div>
                   </CardContent>
@@ -487,7 +487,7 @@ export default function Home() {
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Basic on-page SEO tools (meta titles, tags, alt text)</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Up to 10 GB storage</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Domain & hosting included</span></li>
-                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant ($2,000 back, up to 50%)</span></li>
+                        <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Eligible for PEI Web Presence Grant (50% of project costs, up to $2,000)</span></li>
                       </ul>
                     </div>
                   </CardContent>
