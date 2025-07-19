@@ -28,12 +28,15 @@ export async function POST(request: Request) {
 
     const fromName = process.env.EMAIL_FROM_NAME || 'NightTech Services Inc.';
     const fromAddress = process.env.EMAIL_FROM_ADDRESS;
-    const internalToAddress = process.env.INTERNAL_EMAIL_TO || 'info@nighttechservices.com';
+    const supportEmail = process.env.SUPPORT_EMAIL_TO || 'info@nighttechservices.com';
+    const salesEmail = process.env.SALES_EMAIL_TO || 'marketing@nighttechservices.com';
+    const internalToAddresses = [supportEmail, salesEmail].join(',');
+
 
     // Send internal notification email
     await transporter.sendMail({
         from: `"${fromName}" <${fromAddress}>`,
-        to: internalToAddress,
+        to: internalToAddresses,
         subject: 'Webform Inquiry',
         replyTo: `"${name}" <${email}>`,
         html: internalNotificationTemplate(name, email, message, servicePackage),
@@ -44,7 +47,7 @@ export async function POST(request: Request) {
         from: `"${fromName}" <${fromAddress}>`,
         to: email,
         subject: 'Inquiry received.',
-        replyTo: `"${fromName}" <${internalToAddress}>`,
+        replyTo: `"${fromName}" <${supportEmail}>`,
         html: customerConfirmationTemplate(name),
     });
 
