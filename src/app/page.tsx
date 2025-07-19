@@ -279,27 +279,27 @@ export default function Home() {
                 <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                   <div className="space-y-2">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
-                      <span className="bg-accent text-accent-foreground px-2 rounded-md">Stunning</span> Websites. Delivered
-                      <span className="block mt-2"><span className="bg-accent text-accent-foreground px-2 rounded-md">Fast.</span></span>
+                      <span className="text-accent">Stunning</span> Websites. Delivered
+                      <span className="block mt-2"><span className="text-accent">Fast.</span></span>
                     </h1>
                     <p className="max-w-[600px] text-primary-foreground md:text-xl">
                       NightTech Services Inc. helps your brand launch online — in days, not weeks.
                     </p>
                     <p className="max-w-[600px] text-primary-foreground md:text-lg">
-                      NightTech Services Inc. delivers sleek, <span className="bg-accent text-primary-foreground px-2 rounded-md">high-performing</span> websites with <span className="bg-accent text-primary-foreground px-2 rounded-md">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
+                      NightTech Services Inc. delivers sleek, <span className="font-bold text-accent">high-performing</span> websites with <span className="font-bold text-accent">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                     </p>
                   </div>
-                  <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
-                    <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 animate-pulse">
+                  <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap items-center">
+                    <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 animate-scale-pulse">
                       <Link href="#pricing">Begin</Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100">
+                    <Button asChild variant="outline" className="bg-white text-primary hover:bg-gray-100">
                       <Link href="#services">What We Offer</Link>
                     </Button>
-                    <Button asChild size="lg" variant="default">
+                    <Button asChild variant="default">
                       <Link href="#how-to-begin">Our Process</Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
+                    <Button asChild variant="outline" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
                       <Link href="#testimonials">See what others say</Link>
                     </Button>
                   </div>
