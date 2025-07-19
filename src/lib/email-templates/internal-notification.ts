@@ -13,11 +13,13 @@ export const internalNotificationTemplate = (name: string, email: string, messag
             
             <!-- Header -->
             <tr>
-                <td style="padding: 32px 40px; text-align: center; border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 32px 40px; text-align: center;">
+                    <!-- Logo Icon -->
                     <div style="display: inline-block; vertical-align: middle;">
                          <img src="https://www.nighttechservices.com/logo.png" alt="NightTech Services Inc. Logo" height="32" style="height: 32px; border: 0;">
                     </div>
-                    <div style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 22px; font-weight: 600; color: #2E3A59;">
+                    <!-- Business Name -->
+                    <div style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 22px; font-weight: 600; color: #1f2937;">
                         NightTech Services Inc.
                     </div>
                 </td>
