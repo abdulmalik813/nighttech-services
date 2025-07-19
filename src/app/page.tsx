@@ -170,6 +170,7 @@ export default function Home() {
   const ourWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
+  const techSupportPricingRef = useRef<HTMLDivElement>(null);
   const howToBeginRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -180,6 +181,7 @@ export default function Home() {
   const isOurWorkVisible = useOnScreen(ourWorkRef, 0.2);
   const isAboutVisible = useOnScreen(aboutRef, 0.2);
   const isPricingVisible = useOnScreen(pricingRef, 0.2);
+  const isTechSupportPricingVisible = useOnScreen(techSupportPricingRef, 0.2);
   const isHowToBeginVisible = useOnScreen(howToBeginRef, 0.2);
   const isFaqVisible = useOnScreen(faqRef, 0.2);
   const isTestimonialsVisible = useOnScreen(testimonialsRef, 0.2);
@@ -191,6 +193,7 @@ export default function Home() {
   const ourWorkInView = useOnScreen(ourWorkRef, 0.5);
   const aboutInView = useOnScreen(aboutRef, 0.5);
   const pricingInView = useOnScreen(pricingRef, 0.5);
+  const techSupportPricingInView = useOnScreen(techSupportPricingRef, 0.5);
   const howToBeginInView = useOnScreen(howToBeginRef, 0.5);
   const faqInView = useOnScreen(faqRef, 0.5);
   const testimonialsInView = useOnScreen(testimonialsRef, 0.5);
@@ -233,6 +236,8 @@ export default function Home() {
       setActiveSection('faq');
     } else if (howToBeginInView) {
       setActiveSection('how-to-begin');
+    } else if (techSupportPricingInView) {
+      setActiveSection('tech-support-pricing');
     } else if (pricingInView) {
       setActiveSection('pricing');
     } else if (aboutInView) {
@@ -244,7 +249,7 @@ export default function Home() {
     } else if (heroInView) {
       setActiveSection('hero');
     }
-  }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
+  }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, techSupportPricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
   const handleRequestInfoClick = (packageName: string) => {
     setFormState(prevState => ({ ...prevState, servicePackage: packageName }));
@@ -555,36 +560,41 @@ export default function Home() {
                   </CardFooter>
                 </Card>
               </div>
-              <div className="mt-12 flex justify-center">
-                <div className="lg:w-1/3 md:w-1/2 w-full">
-                    <Card className={cn("flex flex-col border-gray-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '600ms' }}>
-                        <CardHeader>
-                            <CardTitle className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
-                                <Wrench />
-                                On-Site & Remote Technical Support
-                            </CardTitle>
-                            <p className="text-muted-foreground pt-2">Expert help for your hardware and software needs, when you need it.</p>
-                        </CardHeader>
-                        <CardContent className="flex-grow space-y-4">
-                            <div>
-                                <h4 className="font-semibold">Services include:</h4>
-                                <ul className="space-y-2 mt-2">
-                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Computer & Laptop Repair</span></li>
-                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Custom PC Builds & Upgrades</span></li>
-                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Printer Setup & Troubleshooting</span></li>
-                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Software Installation & Support</span></li>
-                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Virus & Malware Removal</span></li>
-                                </ul>
-                            </div>
-                        </CardContent>
-                        <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
-                            <h4 className="font-bold text-lg">🔧 Rate: $80/hour</h4>
-                            <p className="text-sm text-muted-foreground mt-1">(Minimum 1-hour charge for on-site visits)</p>
-                            <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Technical Support')}>Request Service</Button>
-                        </CardFooter>
-                    </Card>
-                </div>
             </div>
+          </section>
+
+          <section id="tech-support-pricing" ref={techSupportPricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 pt-0 flex items-center">
+            <div className={cn("container px-4 md:px-6 transition-all duration-700", isTechSupportPricingVisible ? 'opacity-100' : 'opacity-0')}>
+              <div className="flex justify-center">
+                  <div className="lg:w-1/2 md:w-2/3 w-full">
+                      <Card className={cn("flex flex-col border-gray-500/50 border-2 transition-all duration-500", isTechSupportPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+                          <CardHeader>
+                              <CardTitle className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                  <Wrench />
+                                  On-Site & Remote Technical Support
+                              </CardTitle>
+                              <p className="text-muted-foreground pt-2">Expert help for your hardware and software needs, when you need it.</p>
+                          </CardHeader>
+                          <CardContent className="flex-grow space-y-4">
+                              <div>
+                                  <h4 className="font-semibold">Services include:</h4>
+                                  <ul className="space-y-2 mt-2">
+                                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Computer & Laptop Repair</span></li>
+                                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Custom PC Builds & Upgrades</span></li>
+                                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Printer Setup & Troubleshooting</span></li>
+                                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Software Installation & Support</span></li>
+                                      <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Virus & Malware Removal</span></li>
+                                  </ul>
+                              </div>
+                          </CardContent>
+                          <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                              <h4 className="font-bold text-lg">🔧 Rate: $80/hour</h4>
+                              <p className="text-sm text-muted-foreground mt-1">(Minimum 1-hour charge for on-site visits)</p>
+                              <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Technical Support')}>Request Service</Button>
+                          </CardFooter>
+                      </Card>
+                  </div>
+              </div>
             </div>
           </section>
           
