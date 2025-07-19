@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight, Sparkles, Mouse } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -290,7 +290,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
-                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 animate-pulse">
                       <Link href="#pricing">Begin</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100">
@@ -305,6 +305,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+             <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+                <a href="#services" aria-label="Scroll down">
+                    <Mouse className="w-8 h-8 text-primary-foreground animate-bounce" />
+                </a>
             </div>
           </section>
 
@@ -715,7 +720,7 @@ export default function Home() {
             <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
               <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Need more information?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Request More Information</h2>
                 <p className="text-muted-foreground max-w-[600px] mx-auto">
                   Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach us through our contact details.
                 </p>
