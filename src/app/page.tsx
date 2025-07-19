@@ -266,7 +266,7 @@ export default function Home() {
         />
       </Head>
       <LoadingScreen isVisible={!isPageLoaded} />
-      <div className={cn("flex flex-col min-h-[100dvh] transition-opacity duration-500", !isPageLoaded ? 'opacity-0' : 'opacity-100')}>
+      <div className={cn("flex flex-col min-h-[100dvh] transition-opacity duration-300", !isPageLoaded ? 'opacity-0' : 'opacity-100')}>
         <Header activeSection={activeSection} />
         <main className="flex-1">
           <section
@@ -281,7 +281,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 container px-4 md:px-6">
               <div className="max-w-2xl">
-                <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
+                <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-500", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                   <div className="space-y-2">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
                       <span className="text-accent animate-text-pulse">Stunning</span> Websites. Delivered
@@ -331,7 +331,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/60" />
             <div className="relative z-10 container px-4 md:px-6">
-              <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className={cn("flex flex-col items-center justify-center space-y-4 text-center transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-accent text-accent-foreground px-3 py-1 text-sm">Our Services</div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary-foreground">What We Offer</h2>
@@ -342,49 +342,49 @@ export default function Home() {
               </div>
               <div className="mt-12 max-w-3xl mx-auto w-full">
                 <ul className="space-y-6 text-left text-primary-foreground">
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '100ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>New Websites</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Custom, responsive, and high-performance websites built from scratch to perfectly match your brand.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '200ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Website Editing</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Update and enhance your existing website with new features, content, and a modern design refresh.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '300ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>SEO Optimization</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Improve your search engine ranking, increase organic traffic, and get discovered by more customers.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '400ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Marketing Emails</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Engage your audience with targeted, automated email campaigns that drive conversions and build loyalty.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1000ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '500ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Email Designs</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Beautiful, responsive, and brand-consistent email templates that look great in any inbox.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1200ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Business Solutions</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Custom solutions for your business, like order management systems and other productivity tools.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1400ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '700ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>AI Integration</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Secure and trainable knowledge base for your business.
                     </p>
                   </li>
-                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1600ms' }}>
+                  <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
                     <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Computer & Printer Services</h3>
                     <p className="text-primary-foreground/80 mt-2 ml-6">
                       Expert repairs, custom builds, and setup for both computers and printers to keep you running smoothly.
@@ -397,7 +397,7 @@ export default function Home() {
 
           <section id="our-work" ref={ourWorkRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
             <div className="container px-4 md:px-6">
-              <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-300", isOurWorkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Do</h2>
                 <p className="text-muted-foreground md:text-xl/relaxed">
@@ -423,7 +423,7 @@ export default function Home() {
 
           <section id="about" ref={aboutRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
             <div className="container px-4 md:px-6">
-              <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-700", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className={cn("max-w-3xl mx-auto text-center space-y-6 transition-all duration-300", isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Who We Are</h2>
                 <p className="text-2xl font-semibold tracking-tight">
@@ -445,7 +445,7 @@ export default function Home() {
           </section>
 
           <section id="pricing" ref={pricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
-            <div className={cn("container px-4 md:px-6 transition-all duration-700", isPricingVisible ? 'opacity-100' : 'opacity-0')}>
+            <div className={cn("container px-4 md:px-6 transition-all duration-300", isPricingVisible ? 'opacity-100' : 'opacity-0')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                   <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Pricing</div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Website Development Packages (2025)</h2>
@@ -454,7 +454,7 @@ export default function Home() {
                   </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
-                <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+                <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
                   <CardHeader>
                     <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Essential Presence</CardTitle>
                     <p className="text-muted-foreground pt-2">Professional web presence — simple, clean, and fully managed by NightTech.</p>
@@ -488,7 +488,7 @@ export default function Home() {
                       <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
                   </CardFooter>
                 </Card>
-                <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
+                <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '100ms' }}>
                   <CardHeader>
                     <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Growth Pro</CardTitle>
                     <p className="text-muted-foreground pt-2">Scalable website solution with content tools and SEO control.</p>
@@ -524,7 +524,7 @@ export default function Home() {
                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Growth Pro')}>Request Info</Button>
                   </CardFooter>
                 </Card>
-                <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '400ms' }}>
+                <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
                    <CardHeader>
                     <CardTitle className="text-red-600 dark:text-red-400">🟥 Elite Digital Suite</CardTitle>
                     <p className="text-muted-foreground pt-2">Bespoke, high-performance digital solution with automation and custom development.</p>
@@ -564,10 +564,10 @@ export default function Home() {
           </section>
 
           <section id="tech-support-pricing" ref={techSupportPricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 pt-0 flex items-center">
-            <div className={cn("container px-4 md:px-6 transition-all duration-700", isTechSupportPricingVisible ? 'opacity-100' : 'opacity-0')}>
+            <div className={cn("container px-4 md:px-6 transition-all duration-300", isTechSupportPricingVisible ? 'opacity-100' : 'opacity-0')}>
               <div className="flex justify-center">
                   <div className="lg:w-1/2 md:w-2/3 w-full">
-                      <Card className={cn("flex flex-col border-gray-500/50 border-2 transition-all duration-500", isTechSupportPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+                      <Card className={cn("flex flex-col border-gray-500/50 border-2 transition-all duration-300", isTechSupportPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
                           <CardHeader>
                               <CardTitle className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
                                   <Wrench />
@@ -599,7 +599,7 @@ export default function Home() {
           </section>
           
           <section id="how-to-begin" ref={howToBeginRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
-            <div className={cn("container px-4 md:px-6 transition-all duration-700", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className={cn("container px-4 md:px-6 transition-all duration-300", isHowToBeginVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How to Begin</div>
@@ -654,7 +654,7 @@ export default function Home() {
           </section>
 
           <section id="faq" ref={faqRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
-            <div className={cn("container px-4 md:px-6 transition-all duration-700", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className={cn("container px-4 md:px-6 transition-all duration-300", isFaqVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">FAQ</div>
@@ -702,7 +702,7 @@ export default function Home() {
           </section>
 
           <section id="testimonials" ref={testimonialsRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-t from-white to-amber-100 dark:from-slate-900 dark:to-slate-800 flex items-center">
-            <div className={cn("container px-4 md:px-6 transition-all duration-700", isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+            <div className={cn("container px-4 md:px-6 transition-all duration-300", isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
@@ -766,7 +766,7 @@ export default function Home() {
 
           <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
             <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
-              <div className={cn("space-y-2 text-center transition-all duration-500", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
+              <div className={cn("space-y-2 text-center transition-all duration-300", isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')}>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Contact Us</div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Request More Information</h2>
                 <p className="text-muted-foreground max-w-[600px] mx-auto">
@@ -774,7 +774,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mx-auto w-full max-w-5xl grid md:grid-cols-2 gap-12">
-                <div className={cn("flex flex-col justify-center space-y-6 transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
+                <div className={cn("flex flex-col justify-center space-y-6 transition-all duration-300", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
                   <h3 className="text-xl font-bold text-center md:text-left">Get in Touch Directly</h3>
                   <div className="space-y-6">
                     <div>
@@ -830,7 +830,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-                <Card className={cn("transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}>
+                <Card className={cn("transition-all duration-300", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}>
                   <CardHeader>
                     <CardTitle>Request More Information</CardTitle>
                   </CardHeader>
