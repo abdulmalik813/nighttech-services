@@ -288,7 +288,7 @@ export default function Home() {
                       NightTech Services Inc. helps your brand launch online — in days, not weeks.
                     </p>
                     <p className="max-w-[600px] text-primary-foreground md:text-lg">
-                      NightTech Services Inc. delivers sleek, <span className="font-bold text-accent animate-text-pulse">high-performing</span> websites with <span className="font-bold text-accent animate-text-pulse">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
+                      NightTech Services Inc. delivers sleek, <span className="font-bold text-accent">high-performing</span> websites with <span className="font-bold text-accent">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap items-center">
