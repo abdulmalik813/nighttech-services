@@ -298,7 +298,7 @@ export default function Home() {
                     <Button asChild variant="outline" size="sm" className="bg-white/10 text-primary-foreground border-primary-foreground/50 hover:bg-white/20">
                       <Link href="#services">What We Offer</Link>
                     </Button>
-                    <Button asChild variant="default" size="sm">
+                    <Button asChild variant="outline" size="sm" className="bg-white/10 text-primary-foreground border-primary-foreground/50 hover:bg-white/20">
                       <Link href="#how-to-begin">Our Process</Link>
                     </Button>
                     <Button asChild variant="outline" size="sm" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
