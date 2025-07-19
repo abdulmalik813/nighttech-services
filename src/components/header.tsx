@@ -33,7 +33,7 @@ export function Header({ activeSection }: { activeSection?: string }) {
         <Link href="/#testimonials" prefetch={false} className={cn("text-sm font-medium transition-colors hover:text-primary", activeSection === 'testimonials' && 'underline underline-offset-4 text-primary')}>
           Testimonials
         </Link>
-        <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+        <Button asChild className="bg-accent text-white hover:bg-accent/90">
           <Link href="/#contact" prefetch={false}>Contact Us</Link>
         </Button>
       </nav>
@@ -97,7 +97,7 @@ export function Header({ activeSection }: { activeSection?: string }) {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button asChild className="bg-accent text-white hover:bg-accent/90">
                   <Link href="/#contact" prefetch={false}>Contact Us</Link>
                 </Button>
               </SheetClose>

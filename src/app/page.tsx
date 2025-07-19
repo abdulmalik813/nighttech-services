@@ -766,19 +766,19 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-center md:text-left">Get in Touch Directly</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4 group">
-                      <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
+                      <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
                          <Phone className="h-5 w-5" />
                       </div>
                       <a href="tel:+19026299691" className="hover:text-accent transition-colors">(902) 629-9691</a>
                     </div>
                     <div className="flex items-center gap-4 group">
-                      <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
+                      <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
                          <Mail className="h-5 w-5" />
                       </div>
                       <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
                     </div>
                      <div className="flex items-start gap-4 group">
-                       <div className="bg-accent text-accent-foreground rounded-full p-3 group-hover:bg-primary transition-colors">
+                       <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
                          <MapPin className="h-5 w-5" />
                        </div>
                       <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
@@ -851,7 +851,7 @@ export default function Home() {
                       </div>
                       <Button 
                         type="submit" 
-                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                        className="w-full bg-accent text-white hover:bg-accent/90"
                         disabled={isLoading || isCooldown}
                       >
                         {isLoading ? 'Sending...' : 'Send Message'}
