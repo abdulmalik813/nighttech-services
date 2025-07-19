@@ -377,6 +377,12 @@ export default function Home() {
                       Secure and trainable knowledge base for your business.
                     </p>
                   </li>
+                  <li className={cn("transition-all duration-500", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '1600ms' }}>
+                    <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Computer & Printer Services</h3>
+                    <p className="text-primary-foreground/80 mt-2 ml-6">
+                      Expert repairs, custom builds, and setup for both computers and printers to keep you running smoothly.
+                    </p>
+                  </li>
                 </ul>
               </div>
             </div>
