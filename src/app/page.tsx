@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight, Sparkles, Mouse } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, MousePointerClick, CheckCircle2, ArrowRight, Sparkles, Mouse, Wrench } from 'lucide-react';
 import Image from 'next/image';
 import { useOnScreen } from '@/hooks/use-on-screen';
 import { cn } from '@/lib/utils';
@@ -553,6 +553,36 @@ export default function Home() {
                   </CardFooter>
                 </Card>
               </div>
+              <div className="mt-12 flex justify-center">
+                <div className="lg:w-1/3 md:w-1/2 w-full">
+                    <Card className={cn("flex flex-col border-gray-500/50 border-2 transition-all duration-500", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '600ms' }}>
+                        <CardHeader>
+                            <CardTitle className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                                <Wrench />
+                                On-Site & Remote Technical Support
+                            </CardTitle>
+                            <p className="text-muted-foreground pt-2">Expert help for your hardware and software needs, when you need it.</p>
+                        </CardHeader>
+                        <CardContent className="flex-grow space-y-4">
+                            <div>
+                                <h4 className="font-semibold">Services include:</h4>
+                                <ul className="space-y-2 mt-2">
+                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Computer & Laptop Repair</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Custom PC Builds & Upgrades</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Printer Setup & Troubleshooting</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Software Installation & Support</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Virus & Malware Removal</span></li>
+                                </ul>
+                            </div>
+                        </CardContent>
+                        <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                            <h4 className="font-bold text-lg">🔧 Rate: $80/hour</h4>
+                            <p className="text-sm text-muted-foreground mt-1">(Minimum 1-hour charge for on-site visits)</p>
+                            <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Technical Support')}>Request Service</Button>
+                        </CardFooter>
+                    </Card>
+                </div>
+            </div>
             </div>
           </section>
           
@@ -803,6 +833,7 @@ export default function Home() {
                             <SelectItem value="Essential Presence">🟦 Essential Presence</SelectItem>
                             <SelectItem value="Growth Pro">🟨 Growth Pro</SelectItem>
                             <SelectItem value="Elite Digital Suite">🟥 Elite Digital Suite</SelectItem>
+                            <SelectItem value="Technical Support">🔧 Technical Support</SelectItem>
                             <SelectItem value="Other">Other/Not Sure</SelectItem>
                           </SelectContent>
                         </Select>
