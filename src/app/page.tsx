@@ -764,33 +764,58 @@ export default function Home() {
               <div className="mx-auto w-full max-w-5xl grid md:grid-cols-2 gap-12">
                 <div className={cn("flex flex-col justify-center space-y-6 transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12')}>
                   <h3 className="text-xl font-bold text-center md:text-left">Get in Touch Directly</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4 group">
-                      <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
-                         <Phone className="h-5 w-5" />
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Support</h4>
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-4 group">
+                          <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
+                            <Phone className="h-5 w-5" />
+                          </div>
+                          <a href="tel:+19026299691" className="hover:text-accent transition-colors">(902) 629-9691</a>
+                        </div>
+                        <div className="flex items-center gap-4 group">
+                          <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
+                            <Mail className="h-5 w-5" />
+                          </div>
+                          <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
+                        </div>
                       </div>
-                      <a href="tel:+19026299691" className="hover:text-accent transition-colors">(902) 629-9691</a>
                     </div>
-                    <div className="flex items-center gap-4 group">
-                      <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
-                         <Mail className="h-5 w-5" />
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Sales & Consultation</h4>
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-4 group">
+                          <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
+                            <Phone className="h-5 w-5" />
+                          </div>
+                          <a href="tel:+17823777934" className="hover:text-accent transition-colors">(782) 377-7934</a>
+                        </div>
+                        <div className="flex items-center gap-4 group">
+                          <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
+                            <Mail className="h-5 w-5" />
+                          </div>
+                          <a href="mailto:marketing@nighttechservices.com" className="hover:text-accent transition-colors">marketing@nighttechservices.com</a>
+                        </div>
                       </div>
-                      <a href="mailto:info@nighttechservices.com" className="hover:text-accent transition-colors">info@nighttechservices.com</a>
                     </div>
-                     <div className="flex items-start gap-4 group">
-                       <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
-                         <MapPin className="h-5 w-5" />
-                       </div>
-                      <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Address</h4>
+                      <div className="flex items-start gap-4 group">
+                        <div className="bg-accent text-white rounded-full p-3 group-hover:bg-primary transition-colors">
+                          <MapPin className="h-5 w-5" />
+                        </div>
+                        <span className="text-muted-foreground">30 Shady Acres Drive, Unit 4, Brackley Beach, PEI C1E 2X4 Canada</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-4 pt-4">
-                      <Link href="https://facebook.com/nighttech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
-                          <Facebook className="h-6 w-6" />
-                      </Link>
-                      <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
-                          <Instagram className="h-6 w-6" />
-                      </Link>
-                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 pt-4">
+                    <Link href="https://facebook.com/nighttech" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+                      <Facebook className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+                      <Instagram className="h-6 w-6" />
+                    </Link>
                   </div>
                 </div>
                 <Card className={cn("transition-all duration-700", isContactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12')}>
