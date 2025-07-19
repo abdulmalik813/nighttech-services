@@ -279,27 +279,29 @@ export default function Home() {
                 <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-1000", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                   <div className="space-y-2">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
-                      <span className="text-accent">Stunning</span> Websites. Delivered
-                      <span className="block mt-2"><span className="text-accent">Fast.</span></span>
+                      <span className="text-accent animate-text-pulse">Stunning</span> Websites. Delivered
+                      <span className="block mt-2">
+                        <span className="text-accent animate-text-pulse">Fast.</span>
+                      </span>
                     </h1>
                     <p className="max-w-[600px] text-primary-foreground md:text-xl">
                       NightTech Services Inc. helps your brand launch online — in days, not weeks.
                     </p>
                     <p className="max-w-[600px] text-primary-foreground md:text-lg">
-                      NightTech Services Inc. delivers sleek, <span className="font-bold text-accent">high-performing</span> websites with <span className="font-bold text-accent">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
+                      NightTech Services Inc. delivers sleek, <span className="font-bold text-accent animate-text-pulse">high-performing</span> websites with <span className="font-bold text-accent animate-text-pulse">sharp design</span>, mobile optimization, and expert SEO — all completed in record time. Trusted by startups and small businesses across Canada
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap items-center">
                     <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 animate-scale-pulse">
                       <Link href="#pricing">Begin</Link>
                     </Button>
-                    <Button asChild variant="outline" className="bg-white text-primary hover:bg-gray-100">
+                    <Button asChild variant="outline" size="sm" className="bg-white/10 text-primary-foreground border-primary-foreground/50 hover:bg-white/20">
                       <Link href="#services">What We Offer</Link>
                     </Button>
-                    <Button asChild variant="default">
+                    <Button asChild variant="default" size="sm">
                       <Link href="#how-to-begin">Our Process</Link>
                     </Button>
-                    <Button asChild variant="outline" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
+                    <Button asChild variant="outline" size="sm" className="text-primary-foreground border-primary-foreground/50 bg-white/10 hover:bg-white/20">
                       <Link href="#testimonials">See what others say</Link>
                     </Button>
                   </div>
@@ -394,21 +396,21 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Do</h2>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We’ve built <span className="bg-accent text-primary-foreground px-2 rounded-md">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
+                  We’ve built <span className="font-bold text-accent animate-text-pulse">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
                 </p>
                 <div className="text-left">
                   <p className="text-muted-foreground md:text-xl/relaxed">
                     Each NightTech Site is:
                   </p>
                   <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2">
-                    <li>• <span className="bg-accent text-primary-foreground px-2 rounded-md">Custom-tailored</span> to match your brand</li>
-                    <li>• Designed for a <span className="bg-accent text-primary-foreground px-2 rounded-md">mobile-first experience</span></li>
-                    <li>• <span className="bg-accent text-primary-foreground px-2 rounded-md">SEO-ready</span> to get you found fast</li>
-                    <li>• Built to <span className="bg-accent text-primary-foreground px-2 rounded-md">convert visitors into leads or sales</span></li>
+                    <li>• <span className="font-bold text-accent animate-text-pulse">Custom-tailored</span> to match your brand</li>
+                    <li>• Designed for a <span className="font-bold text-accent animate-text-pulse">mobile-first experience</span></li>
+                    <li>• <span className="font-bold text-accent animate-text-pulse">SEO-ready</span> to get you found fast</li>
+                    <li>• Built to <span className="font-bold text-accent animate-text-pulse">convert visitors into leads or sales</span></li>
                   </ul>
                 </div>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We combine <span className="bg-accent text-primary-foreground px-2 rounded-md">speed with strategy</span>, <span className="bg-accent text-primary-foreground px-2 rounded-md">clean design with real results</span>. Your site doesn’t just look great — it <span className="bg-accent text-primary-foreground px-2 rounded-md">works hard behind the scenes</span> to grow your business.
+                  We combine <span className="font-bold text-accent animate-text-pulse">speed with strategy</span>, <span className="font-bold text-accent animate-text-pulse">clean design with real results</span>. Your site doesn’t just look great — it <span className="font-bold text-accent animate-text-pulse">works hard behind the scenes</span> to grow your business.
                 </p>
               </div>
             </div>
@@ -420,14 +422,14 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Who We Are</h2>
                 <p className="text-2xl font-semibold tracking-tight">
-                  <span className="bg-accent text-primary-foreground px-2 rounded-md">Frustrated with slow, outdated websites that don't perform?</span>
+                  <span className="font-bold text-accent animate-text-pulse">Frustrated with slow, outdated websites that don't perform?</span>
                 </p>
                 <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                   <p>
-                    <span className="bg-accent text-primary-foreground px-2 rounded-md">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services Inc., we close the gap between your vision and execution.
+                    <span className="font-bold text-accent animate-text-pulse">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services Inc., we close the gap between your vision and execution.
                   </p>
                   <p>
-                    We build <span className="bg-accent text-primary-foreground px-2 rounded-md">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
+                    We build <span className="font-bold text-accent animate-text-pulse">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
                   </p>
                   <p>
                     Whether you're a growing startup or an established brand ready to level up, we bring speed, strategy, and sharp design to every project — including expert SEO that gets you found.
@@ -593,7 +595,7 @@ export default function Home() {
                   <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How to Begin</div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Our Process</h2>
                   <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Here’s how to get started in a way that’s <span className="bg-accent text-white px-2 rounded-md">fast, smart, and safe</span> for both of us:
+                    Here’s how to get started in a way that’s <span className="font-bold text-accent animate-text-pulse">fast, smart, and safe</span> for both of us:
                   </p>
                 </div>
               </div>
@@ -603,7 +605,7 @@ export default function Home() {
                   <div className="relative pl-12">
                     <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
                     <h3 className="font-bold text-xl">1. Fill Out the Form</h3>
-                    <p className="text-muted-foreground mt-1">Fill out our <Button asChild variant="link" className="p-0 h-auto bg-accent text-white px-2 rounded-md font-semibold transition-colors hover:bg-accent/90"><Link href="#contact" className="inline-flex items-center gap-1">quick form <MousePointerClick className="h-4 w-4" /></Link></Button> — it helps us understand your goals, brand, and vision.</p>
+                    <p className="text-muted-foreground mt-1">Fill out our <Button asChild variant="link" className="p-0 h-auto font-bold text-accent animate-text-pulse transition-colors hover:bg-accent/90"><Link href="#contact" className="inline-flex items-center gap-1">quick form <MousePointerClick className="h-4 w-4" /></Link></Button> — it helps us understand your goals, brand, and vision.</p>
                   </div>
                   <div className="relative pl-12">
                     <div className="absolute left-5 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background -translate-x-1/2" />
@@ -636,7 +638,7 @@ export default function Home() {
                 </Button>
               </div>
               <p className="text-center mt-8 text-muted-foreground md:text-xl/relaxed">
-                  This proven system filters <span className="bg-accent text-white px-2 rounded-md">serious clients</span>, keeps everyone <span className="bg-accent text-white px-2 rounded-md">protected</span>, and helps us focus on what matters — delivering a <span className="bg-accent text-white px-2 rounded-md">beautiful, high-performing website</span> you’ll love.
+                  This proven system filters <span className="font-bold text-accent animate-text-pulse">serious clients</span>, keeps everyone <span className="font-bold text-accent animate-text-pulse">protected</span>, and helps us focus on what matters — delivering a <span className="font-bold text-accent animate-text-pulse">beautiful, high-performing website</span> you’ll love.
               </p>
             </div>
           </section>

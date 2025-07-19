@@ -36,7 +36,7 @@ export const customerConfirmationTemplate = (name: string) => `
                         We've successfully received your message. Our team is on it and will get back to you as soon as possible.
                     </p>
                     <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px; color: #1f2937;">
-                        We typically respond within <span style="background-color: #b5830e; color: #ffffff; font-weight: 600; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">1-2 business days</span>. We appreciate your patience!
+                        We typically respond within <span style="background-color: #eab308; color: #ffffff; font-weight: 600; padding: 3px 8px; border-radius: 6px; white-space: nowrap;">1-2 business days</span>. We appreciate your patience!
                     </p>
                     <p style="font-size: 16px; line-height: 1.6; margin: 0 0 16px; color: #1f2937;">
                         <br>

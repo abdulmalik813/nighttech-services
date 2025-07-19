@@ -37,7 +37,7 @@ export const internalNotificationTemplate = (name: string, email: string, messag
                         </tr>
                         <tr>
                             <td style="padding: 8px 0; font-weight: 600; color: #2E3A59;">Email:</td>
-                            <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #B8860B; text-decoration: underline;">${email}</a></td>
+                            <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #eab308; text-decoration: underline;">${email}</a></td>
                         </tr>
                         ${servicePackage ? `
                         <tr>
