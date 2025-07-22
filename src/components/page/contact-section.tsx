@@ -15,14 +15,25 @@ import { cn } from '@/lib/utils';
 interface ContactSectionProps {
   contactRef: RefObject<HTMLDivElement>;
   isContactVisible: boolean;
-  formState: { name: string; email: string; message: string; servicePackage: string; promoCode: string; };
-  setFormState: React.Dispatch<React.SetStateAction<{ name: string; email: string; message: string; servicePackage: string; promoCode: string; }>>;
+  formState: { name: string; email: string; message: string; serviceCategory: string; servicePackage: string; promoCode: string; };
+  setFormState: React.Dispatch<React.SetStateAction<{ name: string; email: string; message: string; serviceCategory: string; servicePackage: string; promoCode: string; }>>;
   handleContactSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   isLoading: boolean;
   isCooldown: boolean;
 }
 
 export function ContactSection({ contactRef, isContactVisible, formState, setFormState, handleContactSubmit, isLoading, isCooldown }: ContactSectionProps) {
+  const allPackages: Record<string, string[]> = {
+    'New Builds': ['Essential Presence', 'Growth Pro', 'Elite Digital Suite'],
+    'Existing Sites': ['Website Refresh', 'SEO Tune-Up', 'Marketing & Email'],
+    'Tech Services': ['Technical Support'],
+    'Mobile Apps': ['Starter App', 'Pro App', 'Premium App'],
+    'AI Solutions': ['Starter Bot', 'Smart AI Bot', 'Advanced Bot'],
+    'Other': ['Other/Not Sure'],
+  };
+
+  const availablePackages = formState.serviceCategory ? allPackages[formState.serviceCategory] : [];
+
   return (
     <section id="contact" ref={contactRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
       <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
@@ -118,32 +129,39 @@ export function ContactSection({ contactRef, isContactVisible, formState, setFor
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="servicePackage">Service Package (Optional)</Label>
+                  <Label htmlFor="serviceCategory">Service Category (Optional)</Label>
                   <Select
-                    value={formState.servicePackage}
-                    onValueChange={(value) => setFormState({ ...formState, servicePackage: value })}
+                    value={formState.serviceCategory}
+                    onValueChange={(value) => setFormState({ ...formState, serviceCategory: value, servicePackage: '' })}
                   >
-                    <SelectTrigger id="servicePackage">
-                      <SelectValue placeholder="Select a package" />
+                    <SelectTrigger id="serviceCategory">
+                      <SelectValue placeholder="Select a category" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Essential Presence">🟦 Essential Presence</SelectItem>
-                      <SelectItem value="Growth Pro">🟨 Growth Pro</SelectItem>
-                      <SelectItem value="Elite Digital Suite">🟥 Elite Digital Suite</SelectItem>
-                      <SelectItem value="Existing Site - Website Refresh">Existing Site - Website Refresh</SelectItem>
-                      <SelectItem value="Existing Site - SEO Tune-Up">Existing Site - SEO Tune-Up</SelectItem>
-                      <SelectItem value="Existing Site - Marketing & Email">Existing Site - Marketing & Email</SelectItem>
-                      <SelectItem value="Technical Support">🔧 Technical Support</SelectItem>
-                      <SelectItem value="Mobile App - Starter">Mobile App - Starter</SelectItem>
-                      <SelectItem value="Mobile App - Pro">Mobile App - Pro</SelectItem>
-                      <SelectItem value="Mobile App - Premium">Mobile App - Premium</SelectItem>
-                      <SelectItem value="AI Bot - Starter">AI Bot - Starter</SelectItem>
-                      <SelectItem value="AI Bot - Smart">AI Bot - Smart</SelectItem>
-                      <SelectItem value="AI Bot - Advanced">AI Bot - Advanced</SelectItem>
-                      <SelectItem value="Other">Other/Not Sure</SelectItem>
+                      {Object.keys(allPackages).map(category => (
+                        <SelectItem key={category} value={category}>{category}</SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
+                {availablePackages.length > 0 && (
+                  <div className="space-y-2">
+                    <Label htmlFor="servicePackage">Service Package (Optional)</Label>
+                    <Select
+                      value={formState.servicePackage}
+                      onValueChange={(value) => setFormState({ ...formState, servicePackage: value })}
+                    >
+                      <SelectTrigger id="servicePackage">
+                        <SelectValue placeholder="Select a package" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {availablePackages.map(pkg => (
+                           <SelectItem key={pkg} value={pkg}>{pkg}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                )}
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea 

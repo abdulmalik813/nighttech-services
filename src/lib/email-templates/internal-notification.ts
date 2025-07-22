@@ -1,4 +1,4 @@
-export const internalNotificationTemplate = (name: string, email: string, message: string, servicePackage?: string, promoCode?: string) => `
+export const internalNotificationTemplate = (name: string, email: string, message: string, serviceCategory?: string, servicePackage?: string, promoCode?: string) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +41,12 @@ export const internalNotificationTemplate = (name: string, email: string, messag
                             <td style="padding: 8px 0; font-weight: 600; color: #2E3A59;">Email:</td>
                             <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #eab308; text-decoration: underline;">${email}</a></td>
                         </tr>
+                        ${serviceCategory ? `
+                        <tr>
+                            <td style="padding: 8px 0; font-weight: 600; color: #2E3A59;">Category:</td>
+                            <td style="padding: 8px 0;">${serviceCategory}</td>
+                        </tr>
+                        ` : ''}
                         ${servicePackage ? `
                         <tr>
                             <td style="padding: 8px 0; font-weight: 600; color: #2E3A59;">Package:</td>

@@ -8,7 +8,7 @@ import { CheckCircle2, Wrench, Bot, Smartphone, Pencil, Building } from 'lucide-
 import { cn } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfoClick }: { pricingRef: RefObject<HTMLDivElement>, isPricingVisible: boolean, handleRequestInfoClick: (packageName: string) => void }) {
+export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfoClick }: { pricingRef: RefObject<HTMLDivElement>, isPricingVisible: boolean, handleRequestInfoClick: (category: string, packageName: string) => void }) {
   return (
     <section id="pricing" ref={pricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
       <div className={cn("container px-4 md:px-6 transition-all duration-300", isPricingVisible ? 'opacity-100' : 'opacity-0')}>
@@ -58,7 +58,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
                     <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $900 out-of-pocket</p>
                     <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
-                    <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
+                    <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('New Builds', 'Essential Presence')}>Request Info</Button>
                 </CardFooter>
               </Card>
               <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '100ms' }}>
@@ -90,7 +90,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
                     <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                     <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
-                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Growth Pro')}>Request Info</Button>
+                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('New Builds', 'Growth Pro')}>Request Info</Button>
                 </CardFooter>
               </Card>
               <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
@@ -121,7 +121,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                     <h4 className="font-bold text-lg">💰 Investment: Starting at $7,500+</h4>
                     <p className="text-sm text-muted-foreground mt-4">💼 <span className="font-semibold">Retainer Option:</span> Ongoing optimization & reporting – $200–$500/month</p>
-                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Elite Digital Suite')}>Request Info</Button>
+                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('New Builds', 'Elite Digital Suite')}>Request Info</Button>
                 </CardFooter>
               </Card>
             </div>
@@ -129,9 +129,9 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
           
           <TabsContent value="existing-sites">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-                <Card className="flex flex-col border-purple-500/50 border-2">
+                <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-purple-600 dark:text-purple-400">Website Refresh</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">Website Refresh</CardTitle>
                         <p className="text-muted-foreground pt-2">Modernize your current site's design and functionality.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -143,12 +143,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Starting at $750</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - Website Refresh')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Sites', 'Website Refresh')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
-                <Card className="flex flex-col border-green-500/50 border-2">
+                <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-green-600 dark:text-green-400">SEO Tune-Up</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">SEO Tune-Up</CardTitle>
                         <p className="text-muted-foreground pt-2">Improve your search engine ranking and get found by more customers.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -160,12 +160,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Starting at $500</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - SEO Tune-Up')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Sites', 'SEO Tune-Up')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
-                <Card className="flex flex-col border-pink-500/50 border-2">
+                <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-pink-600 dark:text-pink-400">Marketing & Email</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">Marketing & Email</CardTitle>
                         <p className="text-muted-foreground pt-2">Engage your audience with targeted campaigns and beautiful designs.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -177,7 +177,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Project-based</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - Marketing & Email')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Sites', 'Marketing & Email')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -209,7 +209,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                         <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                             <h4 className="font-bold text-lg">🔧 Rate: $80/hour</h4>
                             <p className="text-sm text-muted-foreground mt-1">(Minimum 1-hour charge for on-site visits)</p>
-                            <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Technical Support')}>Request Service</Button>
+                            <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Tech Services', 'Technical Support')}>Request Service</Button>
                         </CardFooter>
                     </Card>
                 </div>
@@ -223,9 +223,9 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 <p className="font-semibold mt-2">Ideal for: Gyms, salons, wellness providers, event organizers, trades, small e-commerce shops</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                 <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Starter App</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">Starter App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -236,12 +236,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $1,800</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Starter')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile Apps', 'Starter App')}>Request Info</Button>
                     </CardFooter>
                 </Card>
-                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                 <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Pro App</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">Pro App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -252,12 +252,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $3,800</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Pro')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile Apps', 'Pro App')}>Request Info</Button>
                     </CardFooter>
                 </Card>
-                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                 <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Premium App</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">Premium App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -268,7 +268,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $6,800+</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Premium')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile Apps', 'Premium App')}>Request Info</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -285,9 +285,9 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 <p className="font-semibold mt-2">Ideal for: Clinics, realtors, law firms, trades, service providers, online stores</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                 <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Starter Bot</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">Starter Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -297,12 +297,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $600</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Starter')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Solutions', 'Starter Bot')}>Request Info</Button>
                     </CardFooter>
                 </Card>
-                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                 <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Smart AI Bot</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">Smart AI Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -312,12 +312,12 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $1,500</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Smart')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Solutions', 'Smart AI Bot')}>Request Info</Button>
                     </CardFooter>
                 </Card>
-                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                 <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Advanced Bot</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">Advanced Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -327,7 +327,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: $2,900+</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Advanced')}>Request Info</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Solutions', 'Advanced Bot')}>Request Info</Button>
                     </CardFooter>
                 </Card>
             </div>

@@ -63,7 +63,7 @@ const structuredData = {
 
 export default function Home() {
   const { toast } = useToast();
-  const [formState, setFormState] = useState({ name: '', email: '', message: '', servicePackage: '', promoCode: '' });
+  const [formState, setFormState] = useState({ name: '', email: '', message: '', serviceCategory: '', servicePackage: '', promoCode: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [isCooldown, setIsCooldown] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -104,7 +104,7 @@ export default function Home() {
           title: 'Message Sent!',
           description: "Thanks for reaching out. We'll get back to you soon.",
         });
-        setFormState({ name: '', email: '', message: '', servicePackage: '', promoCode: '' });
+        setFormState({ name: '', email: '', message: '', serviceCategory: '', servicePackage: '', promoCode: '' });
       } else {
         const errorData = await response.json();
         toast({
@@ -207,8 +207,8 @@ export default function Home() {
     }
   }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
-  const handleRequestInfoClick = (packageName: string) => {
-    setFormState(prevState => ({ ...prevState, servicePackage: packageName }));
+  const handleRequestInfoClick = (category: string, packageName: string) => {
+    setFormState(prevState => ({ ...prevState, serviceCategory: category, servicePackage: packageName }));
     contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
