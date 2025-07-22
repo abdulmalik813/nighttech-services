@@ -59,19 +59,19 @@ export function ServicesSection({ servicesRef, isServicesVisible }: { servicesRe
               </p>
             </li>
             <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '600ms' }}>
-              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Business Solutions</h3>
+              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Mobile App Development</h3>
               <p className="text-primary-foreground/80 mt-2 ml-6">
-                Custom solutions for your business, like order management systems and other productivity tools.
+                Affordable, custom mobile apps for iOS and Android to engage your customers on the go.
               </p>
             </li>
             <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '700ms' }}>
-              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>AI Integration</h3>
+              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>AI Chatbot Solutions</h3>
               <p className="text-primary-foreground/80 mt-2 ml-6">
-                Secure and trainable knowledge base for your business.
+                Automate customer support and lead generation with custom-trained AI chatbots for your website.
               </p>
             </li>
             <li className={cn("transition-all duration-300", isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12')} style={{ transitionDelay: '800ms' }}>
-              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Computer & Printer Services</h3>
+              <h3 className="text-2xl font-bold"><span className="text-primary mr-2">•</span>Tech Services</h3>
               <p className="text-primary-foreground/80 mt-2 ml-6">
                 Expert repairs, custom builds, and setup for both computers and printers to keep you running smoothly.
               </p>
