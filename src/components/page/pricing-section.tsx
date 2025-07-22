@@ -131,7 +131,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
                 <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-blue-600 dark:text-blue-400">Website Refresh</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Website Refresh</CardTitle>
                         <p className="text-muted-foreground pt-2">Modernize your current site's design and functionality.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -148,7 +148,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                 <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-amber-600 dark:text-amber-400">SEO Tune-Up</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">🟨 SEO Tune-Up</CardTitle>
                         <p className="text-muted-foreground pt-2">Improve your search engine ranking and get found by more customers.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -165,7 +165,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                 <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-red-600 dark:text-red-400">Marketing & Email</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">🟥 Marketing & Email</CardTitle>
                         <p className="text-muted-foreground pt-2">Engage your audience with targeted campaigns and beautiful designs.</p>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -225,7 +225,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
                  <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-blue-600 dark:text-blue-400">Starter App</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Starter App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -241,7 +241,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                  <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-amber-600 dark:text-amber-400">Pro App</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Pro App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -257,7 +257,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                  <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-red-600 dark:text-red-400">Premium App</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">🟥 Premium App</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -287,7 +287,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
                  <Card className="flex flex-col border-blue-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-blue-600 dark:text-blue-400">Starter Bot</CardTitle>
+                        <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Starter Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -302,7 +302,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                  <Card className="flex flex-col border-amber-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-amber-600 dark:text-amber-400">Smart AI Bot</CardTitle>
+                        <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Smart AI Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
@@ -317,7 +317,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                 </Card>
                  <Card className="flex flex-col border-red-500/50 border-2">
                     <CardHeader>
-                        <CardTitle className="text-red-600 dark:text-red-400">Advanced Bot</CardTitle>
+                        <CardTitle className="text-red-600 dark:text-red-400">🟥 Advanced Bot</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <ul className="space-y-2 mt-2">
