@@ -16,7 +16,6 @@ import { ServicesSection } from '@/components/page/services-section';
 import { OurWorkSection } from '@/components/page/our-work-section';
 import { AboutSection } from '@/components/page/about-section';
 import { PricingSection } from '@/components/page/pricing-section';
-import { TechSupportPricingSection } from '@/components/page/tech-support-pricing-section';
 import { HowToBeginSection } from '@/components/page/how-to-begin-section';
 import { FaqSection } from '@/components/page/faq-section';
 import { TestimonialsSection } from '@/components/page/testimonials-section';
@@ -132,7 +131,6 @@ export default function Home() {
   const ourWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
-  const techSupportPricingRef = useRef<HTMLDivElement>(null);
   const howToBeginRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -143,7 +141,6 @@ export default function Home() {
   const isOurWorkVisible = useOnScreen(ourWorkRef, 0.2);
   const isAboutVisible = useOnScreen(aboutRef, 0.2);
   const isPricingVisible = useOnScreen(pricingRef, 0.2);
-  const isTechSupportPricingVisible = useOnScreen(techSupportPricingRef, 0.2);
   const isHowToBeginVisible = useOnScreen(howToBeginRef, 0.2);
   const isFaqVisible = useOnScreen(faqRef, 0.2);
   const isTestimonialsVisible = useOnScreen(testimonialsRef, 0.2);
@@ -155,7 +152,6 @@ export default function Home() {
   const ourWorkInView = useOnScreen(ourWorkRef, 0.5);
   const aboutInView = useOnScreen(aboutRef, 0.5);
   const pricingInView = useOnScreen(pricingRef, 0.5);
-  const techSupportPricingInView = useOnScreen(techSupportPricingRef, 0.5);
   const howToBeginInView = useOnScreen(howToBeginRef, 0.5);
   const faqInView = useOnScreen(faqRef, 0.5);
   const testimonialsInView = useOnScreen(testimonialsRef, 0.5);
@@ -198,8 +194,6 @@ export default function Home() {
       setActiveSection('faq');
     } else if (howToBeginInView) {
       setActiveSection('how-to-begin');
-    } else if (techSupportPricingInView) {
-      setActiveSection('tech-support-pricing');
     } else if (pricingInView) {
       setActiveSection('pricing');
     } else if (aboutInView) {
@@ -211,7 +205,7 @@ export default function Home() {
     } else if (heroInView) {
       setActiveSection('hero');
     }
-  }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, techSupportPricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
+  }, [heroInView, servicesInView, ourWorkInView, aboutInView, pricingInView, howToBeginInView, faqInView, testimonialsInView, contactInView]);
 
   const handleRequestInfoClick = (packageName: string) => {
     setFormState(prevState => ({ ...prevState, servicePackage: packageName }));
@@ -235,7 +229,6 @@ export default function Home() {
           <OurWorkSection ourWorkRef={ourWorkRef} isOurWorkVisible={isOurWorkVisible} />
           <AboutSection aboutRef={aboutRef} isAboutVisible={isAboutVisible} />
           <PricingSection pricingRef={pricingRef} isPricingVisible={isPricingVisible} handleRequestInfoClick={handleRequestInfoClick} />
-          <TechSupportPricingSection techSupportPricingRef={techSupportPricingRef} isTechSupportPricingVisible={isTechSupportPricingVisible} handleRequestInfoClick={handleRequestInfoClick} />
           <HowToBeginSection howToBeginRef={howToBeginRef} isHowToBeginVisible={isHowToBeginVisible} />
           <FaqSection faqRef={faqRef} isFaqVisible={isFaqVisible} />
           <TestimonialsSection
