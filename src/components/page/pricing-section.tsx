@@ -7,8 +7,6 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, Wrench, Bot, Smartphone, Pencil, Building } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-
 
 export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfoClick }: { pricingRef: RefObject<HTMLDivElement>, isPricingVisible: boolean, handleRequestInfoClick: (packageName: string) => void }) {
   return (
@@ -33,7 +31,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
 
           <TabsContent value="new-builds">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-              <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+              <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
                 <CardHeader>
                   <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Essential Presence</CardTitle>
                   <p className="text-muted-foreground pt-2">Professional web presence — simple, clean, and fully managed by NightTech.</p>
@@ -63,7 +61,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
                 </CardFooter>
               </Card>
-              <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '100ms' }}>
+              <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '100ms' }}>
                 <CardHeader>
                   <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Growth Pro</CardTitle>
                   <p className="text-muted-foreground pt-2">Scalable website solution with content tools and SEO control.</p>
@@ -95,7 +93,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                      <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Growth Pro')}>Request Info</Button>
                 </CardFooter>
               </Card>
-              <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-300", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
+              <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
                  <CardHeader>
                   <CardTitle className="text-red-600 dark:text-red-400">🟥 Elite Digital Suite</CardTitle>
                   <p className="text-muted-foreground pt-2">Bespoke, high-performance digital solution with automation and custom development.</p>
@@ -145,7 +143,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Starting at $750</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Website Refresh')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - Website Refresh')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
                 <Card className="flex flex-col border-green-500/50 border-2">
@@ -162,7 +160,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Starting at $500</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('SEO Tune-Up')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - SEO Tune-Up')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
                 <Card className="flex flex-col border-pink-500/50 border-2">
@@ -179,7 +177,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     </CardContent>
                     <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
                         <h4 className="font-bold text-lg">💰 Investment: Project-based</h4>
-                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Marketing & Email')}>Request Quote</Button>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Existing Site - Marketing & Email')}>Request Quote</Button>
                     </CardFooter>
                 </Card>
             </div>
@@ -219,100 +217,123 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
           </TabsContent>
 
           <TabsContent value="mobile-apps">
-            <div className="mt-8 max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold tracking-tight">📱 Mobile App Launch Kits</h3>
-                  <p className="text-muted-foreground max-w-3xl mx-auto mt-2">Bring your business to your customers’ fingertips. Give your customers the convenience of accessing your services anytime, anywhere. Our Mobile App Launch Kits are built using powerful no-code platforms like Glide and Adalo — making custom business apps faster, more affordable, and tailored to your goals.</p>
-                  <p className="font-semibold mt-2">Ideal for: Gyms, salons, wellness providers, event organizers, trades, small e-commerce shops</p>
-              </div>
-              <Card>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="w-1/3">Plan</TableHead>
-                            <TableHead>Features</TableHead>
-                            <TableHead className="text-right w-1/4">Price (CAD)</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell className="font-medium">Starter App</TableCell>
-                            <TableCell>1 core feature (e.g. booking or loyalty), branded design, mobile-ready</TableCell>
-                            <TableCell className="text-right">$1,800</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell className="font-medium">Pro App</TableCell>
-                            <TableCell>Multi-feature (e.g. booking + loyalty + notifications), secure login, branding</TableCell>
-                            <TableCell className="text-right">$3,800</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell className="font-medium">Premium App</TableCell>
-                            <TableCell>Advanced functionality, admin dashboard, API integrations, analytics</TableCell>
-                            <TableCell className="text-right">$6,800+</TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
-                <CardContent className="pt-6">
-                  <h4 className="font-semibold">Add-ons:</h4>
-                  <ul className="list-disc list-inside text-muted-foreground mt-2">
-                    <li>App store publishing (iOS/Android): $300</li>
-                    <li>Monthly maintenance & hosting: from $75/month</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <div className="text-center mt-6">
-                <p className="font-semibold text-lg">Your business. In their pocket. No code. No headaches.</p>
-                <Button className="mt-4" onClick={() => handleRequestInfoClick('Mobile App')}>Get a Mobile App</Button>
-              </div>
+            <div className="text-center my-8">
+                <h3 className="text-2xl font-bold tracking-tight">📱 Mobile App Launch Kits</h3>
+                <p className="text-muted-foreground max-w-3xl mx-auto mt-2">Bring your business to your customers’ fingertips. Give your customers the convenience of accessing your services anytime, anywhere. Our Mobile App Launch Kits are built using powerful no-code platforms like Glide and Adalo — making custom business apps faster, more affordable, and tailored to your goals.</p>
+                <p className="font-semibold mt-2">Ideal for: Gyms, salons, wellness providers, event organizers, trades, small e-commerce shops</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
+                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Starter App</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>1 core feature (e.g. booking or loyalty)</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Branded design</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Mobile-ready</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $1,800</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Starter')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Pro App</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Multi-feature (booking, loyalty, etc.)</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Secure login</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Full branding</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $3,800</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Pro')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+                 <Card className="flex flex-col border-cyan-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-cyan-600 dark:text-cyan-400">Premium App</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Advanced functionality</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Admin dashboard</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>API integrations & analytics</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $6,800+</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Mobile App - Premium')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+            </div>
+            <div className="text-center mt-8 text-muted-foreground">
+              <p className="font-semibold">Your business. In their pocket. No code. No headaches.</p>
+              <p className="text-sm mt-2">Add-ons: App store publishing (iOS/Android): $300 | Monthly maintenance & hosting: from $75/month</p>
             </div>
           </TabsContent>
 
           <TabsContent value="ai-solutions">
-             <div className="mt-8 max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold tracking-tight">🤖 Custom AI Chatbots for Sales & Support</h3>
-                  <p className="text-muted-foreground max-w-3xl mx-auto mt-2">Turn your website into a 24/7 sales & customer service machine. Modern customers expect instant answers — and your team can’t always be online. With our Custom AI Chatbots, you can automate FAQ responses, capture leads, book appointments, and even assist in multiple languages.</p>
-                   <p className="font-semibold mt-2">Ideal for: Clinics, realtors, law firms, trades, service providers, online stores</p>
-              </div>
-               <Card>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="w-1/3">Plan</TableHead>
-                            <TableHead>Features</TableHead>
-                            <TableHead className="text-right w-1/4">Price (CAD)</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell className="font-medium">Starter Bot</TableCell>
-                            <TableCell>Simple rule-based chatbot (FAQs, contact info), embedded on your website</TableCell>
-                            <TableCell className="text-right">$600</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell className="font-medium">Smart AI Bot</TableCell>
-                            <TableCell>GPT-powered chatbot trained on your content (PDFs, website, etc.)</TableCell>
-                            <TableCell className="text-right">$1,500</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell className="font-medium">Advanced Bot</TableCell>
-                            <TableCell>Multi-language support, lead capture, booking/CRM integration</TableCell>
-                            <TableCell className="text-right">$2,900+</TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
-                 <CardContent className="pt-6">
-                  <h4 className="font-semibold">Add-ons:</h4>
-                  <ul className="list-disc list-inside text-muted-foreground mt-2">
-                    <li>Monthly performance tuning & maintenance: from $65/month</li>
-                    <li>WhatsApp or Messenger integration: $350</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <div className="text-center mt-6">
-                <p className="font-semibold text-lg">Save time. Impress customers. Capture more leads — automatically.</p>
-                <Button className="mt-4" onClick={() => handleRequestInfoClick('AI Chatbot')}>Get an AI Bot</Button>
-              </div>
+            <div className="text-center my-8">
+                <h3 className="text-2xl font-bold tracking-tight">🤖 Custom AI Chatbots for Sales & Support</h3>
+                <p className="text-muted-foreground max-w-3xl mx-auto mt-2">Turn your website into a 24/7 sales & customer service machine. Modern customers expect instant answers — and your team can’t always be online. With our Custom AI Chatbots, you can automate FAQ responses, capture leads, book appointments, and even assist in multiple languages.</p>
+                <p className="font-semibold mt-2">Ideal for: Clinics, realtors, law firms, trades, service providers, online stores</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
+                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Starter Bot</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Simple rule-based chatbot (FAQs, contact info)</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Embedded on your website</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $600</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Starter')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Smart AI Bot</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>GPT-powered chatbot</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Trained on your content (PDFs, website, etc.)</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $1,500</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Smart')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+                 <Card className="flex flex-col border-indigo-500/50 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-indigo-600 dark:text-indigo-400">Advanced Bot</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <ul className="space-y-2 mt-2">
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Multi-language support</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 shrink-0" /><span>Lead capture & booking/CRM integration</span></li>
+                        </ul>
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
+                        <h4 className="font-bold text-lg">💰 Investment: $2,900+</h4>
+                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('AI Bot - Advanced')}>Request Info</Button>
+                    </CardFooter>
+                </Card>
+            </div>
+             <div className="text-center mt-8 text-muted-foreground">
+                <p className="font-semibold">Save time. Impress customers. Capture more leads — automatically.</p>
+                <p className="text-sm mt-2">Add-ons: Monthly performance tuning & maintenance: from $65/month | WhatsApp or Messenger integration: $350</p>
             </div>
           </TabsContent>
 

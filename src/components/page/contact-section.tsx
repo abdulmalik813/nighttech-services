@@ -130,7 +130,16 @@ export function ContactSection({ contactRef, isContactVisible, formState, setFor
                       <SelectItem value="Essential Presence">🟦 Essential Presence</SelectItem>
                       <SelectItem value="Growth Pro">🟨 Growth Pro</SelectItem>
                       <SelectItem value="Elite Digital Suite">🟥 Elite Digital Suite</SelectItem>
+                      <SelectItem value="Existing Site - Website Refresh">Existing Site - Website Refresh</SelectItem>
+                      <SelectItem value="Existing Site - SEO Tune-Up">Existing Site - SEO Tune-Up</SelectItem>
+                      <SelectItem value="Existing Site - Marketing & Email">Existing Site - Marketing & Email</SelectItem>
                       <SelectItem value="Technical Support">🔧 Technical Support</SelectItem>
+                      <SelectItem value="Mobile App - Starter">Mobile App - Starter</SelectItem>
+                      <SelectItem value="Mobile App - Pro">Mobile App - Pro</SelectItem>
+                      <SelectItem value="Mobile App - Premium">Mobile App - Premium</SelectItem>
+                      <SelectItem value="AI Bot - Starter">AI Bot - Starter</SelectItem>
+                      <SelectItem value="AI Bot - Smart">AI Bot - Smart</SelectItem>
+                      <SelectItem value="AI Bot - Advanced">AI Bot - Advanced</SelectItem>
                       <SelectItem value="Other">Other/Not Sure</SelectItem>
                     </SelectContent>
                   </Select>
