@@ -102,7 +102,7 @@ const structuredData = {
 
 export default function Home() {
   const { toast } = useToast();
-  const [formState, setFormState] = useState({ name: '', email: '', message: '', servicePackage: '' });
+  const [formState, setFormState] = useState({ name: '', email: '', message: '', servicePackage: '', promoCode: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [isCooldown, setIsCooldown] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -143,7 +143,7 @@ export default function Home() {
           title: 'Message Sent!',
           description: "Thanks for reaching out. We'll get back to you soon.",
         });
-        setFormState({ name: '', email: '', message: '', servicePackage: '' });
+        setFormState({ name: '', email: '', message: '', servicePackage: '', promoCode: '' });
       } else {
         const errorData = await response.json();
         toast({
@@ -281,7 +281,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 container px-4 md:px-6">
               <div className="max-w-2xl">
-                <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-500", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
+                <div className={cn("flex flex-col justify-center space-y-4 transition-all duration-300", isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24')}>
                   <div className="space-y-2">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-primary-foreground">
                       <span className="text-accent animate-text-pulse">Stunning</span> Websites. Delivered
@@ -401,21 +401,21 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Work</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What We Do</h2>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We’ve built <span className="font-bold">lightning-fast, high-converting</span> websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
+                  We’ve built lightning-fast, high-converting websites for businesses across Canada — from service providers and local shops to consultants, creatives, and eCommerce brands.
                 </p>
                 <div className="text-left">
                   <p className="text-muted-foreground md:text-xl/relaxed">
                     Each NightTech Site is:
                   </p>
                   <ul className="text-muted-foreground md:text-xl/relaxed list-none space-y-2">
-                    <li>• <span className="font-bold">Custom-tailored</span> to match your brand</li>
-                    <li>• Designed for a <span className="font-bold">mobile-first experience</span></li>
-                    <li>• <span className="font-bold">SEO-ready</span> to get you found fast</li>
-                    <li>• Built to <span className="font-bold">convert visitors into leads or sales</span></li>
+                    <li>• Custom-tailored to match your brand</li>
+                    <li>• Designed for a mobile-first experience</li>
+                    <li>• SEO-ready to get you found fast</li>
+                    <li>• Built to convert visitors into leads or sales</li>
                   </ul>
                 </div>
                 <p className="text-muted-foreground md:text-xl/relaxed">
-                  We combine <span className="font-bold">speed with strategy</span>, <span className="font-bold">clean design with real results</span>. Your site doesn’t just look great — it <span className="font-bold">works hard behind the scenes</span> to grow your business.
+                  We combine speed with strategy, clean design with real results. Your site doesn’t just look great — it works hard behind the scenes to grow your business.
                 </p>
               </div>
             </div>
@@ -427,14 +427,14 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">About Us</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Who We Are</h2>
                 <p className="text-2xl font-semibold tracking-tight">
-                  <span className="font-bold">Frustrated with slow, outdated websites that don't perform?</span>
+                  Frustrated with slow, outdated websites that don't perform?
                 </p>
                 <div className="space-y-4 text-muted-foreground md:text-xl/relaxed">
                   <p>
-                    <span className="font-bold">You're not alone.</span> Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services Inc., we close the gap between your vision and execution.
+                    You're not alone. Most businesses struggle with poor online presence, but it's not your fault — the digital world moves fast. At NightTech Services Inc., we close the gap between your vision and execution.
                   </p>
                   <p>
-                    We build <span className="font-bold">clean, fast, and mobile-optimized websites</span> that look impressive and convert traffic into leads.
+                    We build clean, fast, and mobile-optimized websites that look impressive and convert traffic into leads.
                   </p>
                   <p>
                     Whether you're a growing startup or an established brand ready to level up, we bring speed, strategy, and sharp design to every project — including expert SEO that gets you found.
@@ -478,12 +478,8 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
-                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
-                        <Sparkles className="h-4 w-4" />
-                        <span>Limited Time Offer: $100 OFF!</span>
-                      </div>
-                      <h4 className="font-bold text-lg">💰 Investment: <span className="line-through text-muted-foreground/80">$1,800</span> $1,700 <span className="text-sm font-normal">(one-time)</span></h4>
-                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $850 out-of-pocket</p>
+                      <h4 className="font-bold text-lg">💰 Investment: $1,800 <span className="text-sm font-normal">(one-time)</span></h4>
+                      <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $900 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Ongoing content updates + analytics – $50/month</p>
                       <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Essential Presence')}>Request Info</Button>
                   </CardFooter>
@@ -514,10 +510,6 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
-                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
-                        <Sparkles className="h-4 w-4" />
-                        <span>Limited Time Offer: $100 OFF!</span>
-                      </div>
                       <h4 className="font-bold text-lg">💰 Investment: $2,400–$5,000</h4>
                       <p className="font-semibold text-green-600">Grant-eligible clients could pay as little as $1,200 out-of-pocket</p>
                       <p className="text-sm text-muted-foreground mt-4">🔧 <span className="font-semibold">Optional Add-On:</span> Monthly SEO/analytics report – $75/month</p>
@@ -550,10 +542,6 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col items-start bg-muted/50 p-6 mt-auto">
-                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700 dark:bg-red-900/50 dark:text-red-300">
-                        <Sparkles className="h-4 w-4" />
-                        <span>Limited Time Offer: $100 OFF!</span>
-                      </div>
                       <h4 className="font-bold text-lg">💰 Investment: Starting at $7,500+</h4>
                       <p className="text-sm text-muted-foreground mt-4">💼 <span className="font-semibold">Retainer Option:</span> Ongoing optimization & reporting – $200–$500/month</p>
                        <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('Elite Digital Suite')}>Request Info</Button>
@@ -885,6 +873,15 @@ export default function Home() {
                           onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                           required
                         />
+                      </div>
+                       <div className="space-y-2">
+                        <Label htmlFor="promoCode">Promotion Code (Optional)</Label>
+                        <Input 
+                          id="promoCode" 
+                          placeholder="Enter promotion code"
+                          value={formState.promoCode}
+                          onChange={(e) => setFormState({ ...formState, promoCode: e.target.value })}
+                         />
                       </div>
                       <Button 
                         type="submit" 
