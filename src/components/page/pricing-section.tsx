@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfoClick }: { pricingRef: RefObject<HTMLDivElement>, isPricingVisible: boolean, handleRequestInfoClick: (category: string, packageName: string) => void }) {
   return (
     <section id="pricing" ref={pricingRef} className="w-full scroll-mt-20 overflow-hidden py-20 bg-gradient-to-b from-white to-amber-100 dark:from-slate-800 dark:to-slate-900 flex items-center">
-      <div className={cn("container px-4 md:px-6 transition-all duration-300", isPricingVisible ? 'opacity-100' : 'opacity-0')}>
+      <div className={cn("container px-4 md:px-6")}>
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Pricing</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Flexible Plans for Every Need</h2>
@@ -31,7 +31,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
 
           <TabsContent value="new-builds">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-              <Card className={cn("flex flex-col border-blue-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")}>
+              <Card className="flex flex-col border-blue-500/50 border-2">
                 <CardHeader>
                   <CardTitle className="text-blue-600 dark:text-blue-400">🟦 Essential Presence</CardTitle>
                   <p className="text-muted-foreground pt-2">Professional web presence — simple, clean, and fully managed by NightTech.</p>
@@ -61,7 +61,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                     <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('New Builds', 'Essential Presence')}>Request Info</Button>
                 </CardFooter>
               </Card>
-              <Card className={cn("flex flex-col border-amber-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '100ms' }}>
+              <Card className="flex flex-col border-amber-500/50 border-2">
                 <CardHeader>
                   <CardTitle className="text-amber-600 dark:text-amber-400">🟨 Growth Pro</CardTitle>
                   <p className="text-muted-foreground pt-2">Scalable website solution with content tools and SEO control.</p>
@@ -93,7 +93,7 @@ export function PricingSection({ pricingRef, isPricingVisible, handleRequestInfo
                      <Button className="w-full mt-4" onClick={() => handleRequestInfoClick('New Builds', 'Growth Pro')}>Request Info</Button>
                 </CardFooter>
               </Card>
-              <Card className={cn("flex flex-col border-red-500/50 border-2 transition-all duration-1000", isPricingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{ transitionDelay: '200ms' }}>
+              <Card className="flex flex-col border-red-500/50 border-2">
                  <CardHeader>
                   <CardTitle className="text-red-600 dark:text-red-400">🟥 Elite Digital Suite</CardTitle>
                   <p className="text-muted-foreground pt-2">Bespoke, high-performance digital solution with automation and custom development.</p>
